@@ -99,7 +99,7 @@ function Quize() {
                     <div className="q-name w-full flex flex-col space-y-1 text-left">
                       <span>Lecture {item.number}</span>
                       <h3 className="font-semibold">{item.lecture}</h3>
-                      {/* <h3>{item.title}</h3> */}
+                    
                     </div>
                   </div>
                 ))}
