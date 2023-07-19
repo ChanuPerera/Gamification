@@ -16,3 +16,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.quize-item-card.active {
+  color: #1f1f71;
+  
+}
+
+.quize-item-card.active .quize-item-number
+{
+  background-color: #1f1f71;
+  color: #ffffff;
+}
+
+.quize-item-card.inactive {
+  color: #828282 !important;
+  
+}
+
+.quize-item-card.inactive .q-name h4{
+  color: #828282 !important;
+  
+}
+
+.quize-item-card.inactive .quize-item-number {
+  color: #828282 !important;
+  
+}
