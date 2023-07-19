@@ -31,7 +31,7 @@ function Quize() {
                 <div className="w-[70%] mx-auto flex flex-row justify-center items-center">
                   <div className="w-full flex flex-col text-left ">
                     <h4 className="nav-head font-semibold text-[#191919]">
-                      1. Student Details
+                      2. Overall questions of C Language
                     </h4>
                     <h5 className="text-[#5d5d5d]">
                       Lorem ipsum dolor sit amet.
@@ -47,7 +47,7 @@ function Quize() {
                 <div className="w-[70%] mx-auto flex flex-row justify-center items-center">
                   <div className="w-full flex flex-col text-left ">
                     <h4 className="nav-head font-semibold text-[#191919]">
-                      1. Student Details
+                      3. Create Profile
                     </h4>
                     <h5 className="text-[#5d5d5d]">
                       Lorem ipsum dolor sit amet.
@@ -58,7 +58,7 @@ function Quize() {
                   </div>
                 </div>
               </div>
-              
+
             </div>
 
             <div className="quize-panel p-5 w-full h-full flex flex-row bg-white ">
