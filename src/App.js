@@ -1,9 +1,18 @@
+import Quize from "./Routes/Quize";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+
+
+
 
 function App() {
   return (
-    <div className="App bg-slate-600">
-      <p>dwd</p>
-    </div>
+    <BrowserRouter>
+    <Navbar />
+      <Routes>
+        <Route path="/" element={<Quize/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
