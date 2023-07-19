@@ -82,11 +82,11 @@ function Quize() {
             </div>
 
             <div className="quize-panel p-5 w-full h-full flex flex-row bg-white ">
-              <div className="quize-items p-2 h-full w-1/4 space-y-5   ">
+              <div className="quize-items p-2 h-full w-1/4 space-y-5  ">
                 {quizItems.map((item, index) => (
                   <div
                     key={index}
-                    className={`quize-item-card flex flex-row w-full justify-center items-center space-x-5 p-2 cursor-pointer ${
+                    className={`quize-item-card flex flex-row w-full justify-center items-center space-x-5 p-2 cursor-pointer hover:bg-gray-50 ${
                       activeQuiz === index ? "active" : "inactive"
                     }`}
                     onClick={() => handleQuizItemClick(index)}
