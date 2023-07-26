@@ -82,7 +82,10 @@ function Quize() {
             </div>
 
             <div className="quize-panel p-5 w-full h-full flex flex-row bg-white ">
-              <div className="quize-items p-2 h-full w-1/4 space-y-5  ">
+
+
+
+              <div className="quize-items p-5 h-full w-1/4 space-y-5  ">
                 {quizItems.map((item, index) => (
                   <div
                     key={index}
