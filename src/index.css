@@ -47,3 +47,11 @@ code {
   color: #828282 !important;
   
 }
+
+
+
+.react-multiple-carousel__arrow
+{
+  background: rgb(240,176,0) !important;
+background: linear-gradient(0deg, rgba(240,176,0,1) 0%, rgba(240,41,160,1) 100%) !important;
+}
