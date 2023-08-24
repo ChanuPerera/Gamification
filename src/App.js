@@ -1,6 +1,8 @@
 import Quize from "./Routes/Quize";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import LandingPage from "./Routes/landing";
+import MainNav from "./Components/mainNav";
 
 
 
@@ -8,9 +10,9 @@ import Navbar from "./Components/Navbar";
 function App() {
   return (
     <BrowserRouter>
-    <Navbar />
+   <MainNav/>
       <Routes>
-        <Route path="/" element={<Quize/>}/>
+        <Route path="/" element={<LandingPage/>}/>
       </Routes>
     </BrowserRouter>
   );

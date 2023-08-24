@@ -17,6 +17,10 @@ code {
     monospace;
 }
 
+.font-link
+{
+  font-family: 'Chakra Petch', sans-serif;
+}
 
 .quize-item-card.active {
   color: #1f1f71;
