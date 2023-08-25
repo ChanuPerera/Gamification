@@ -173,8 +173,8 @@ const LandingPage = () => {
             
                 <div className="sm:w-[80%] w-[90%] flex sm:flex-row flex-col p-5 sm:mt-[90px] sm:space-x-5 space-x-2 justify-center items-center mx-auto ">
 
-                    <div className="player-card-outter bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] p-[1px] rounded-2xl sm:mt-20 w-full mt-5 mb-5">
-                        <div className="player-card flex flex-col sm:w-[256px] sm:h-[400px] h-[400px] rounded-2xl items-center justify-center bg-[#0E063D] w-full ">
+                <div className="player-card-outter bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] p-[1px] rounded-2xl sm:mt-20 w-full lg:w-[300px] mt-5 mb-5">
+                        <div className="player-card flex flex-col sm:w-[256px] md:w-[256px] lg:w-[298px] sm:h-[400px]  h-[400px] rounded-2xl items-center justify-center bg-[#0E063D] w-full ">
                             <div className="player-image-box sm:w-[200px] sm:h-[200px] relative justify-center items-center flex flex-col">
                             <img src={circle} alt="" srcset="" className="w-full h-full object-cover  z-10 " />
                             <div className="player-profile-imgbox sm:w-[80px] sm:h-[80px]  absolute rounded-full ">
@@ -199,8 +199,8 @@ const LandingPage = () => {
 
 
 
-                    <div className="player-card-outter bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] p-[1px] rounded-2xl sm:mt-5 w-full mt-5 mb-5">
-                        <div className="player-card flex flex-col sm:w-[256px] sm:h-[400px] h-[400px] rounded-2xl items-center justify-center bg-[#0E063D] w-full relative">
+                    <div className="player-card-outter bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] p-[1px] rounded-2xl sm:mt-5 w-full lg:w-[300px] mt-5 mb-5">
+                        <div className="player-card flex flex-col sm:w-[256px] md:w-[256px] lg:w-[298px] sm:h-[400px]  h-[400px] rounded-2xl items-center justify-center bg-[#0E063D] w-full relative">
                             <div className="player-image-box sm:w-[200px] sm:h-[200px] relative justify-center items-center flex flex-col">
                             <img src={circle} alt="" srcset="" className="w-full h-full object-cover  z-10 " />
                             <div className="player-profile-imgbox sm:w-[80px] sm:h-[80px]  absolute rounded-full ">
@@ -228,8 +228,8 @@ const LandingPage = () => {
 
 
 
-                    <div className="player-card-outter bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] p-[1px] rounded-2xl sm:mt-20 w-full mt-5 mb-5">
-                        <div className="player-card flex flex-col sm:w-[256px] sm:h-[400px] h-[400px] rounded-2xl items-center justify-center bg-[#0E063D] w-full ">
+                    <div className="player-card-outter bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] p-[1px] rounded-2xl sm:mt-20 w-full lg:w-[300px] mt-5 mb-5">
+                        <div className="player-card flex flex-col sm:w-[256px] md:w-[256px] lg:w-[298px] sm:h-[400px]  h-[400px] rounded-2xl items-center justify-center bg-[#0E063D] w-full ">
                             <div className="player-image-box sm:w-[200px] sm:h-[200px] relative justify-center items-center flex flex-col">
                             <img src={circle} alt="" srcset="" className="w-full h-full object-cover  z-10 " />
                             <div className="player-profile-imgbox sm:w-[80px] sm:h-[80px]  absolute rounded-full ">
