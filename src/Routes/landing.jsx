@@ -17,7 +17,10 @@ import complete from '../Assets/Images/User Check.png';
 import start from '../Assets/Images/Square Academic Cap.png'
 import line from '../Assets/Images/line.png';
 import line2 from '../Assets/Images/line2.png';
-
+import howit from '../Assets/Images/hiwbg.png';
+import circle from '../Assets/Images/circle.png';
+import pethz from '../Assets/Images/pethz.png';
+import giftico from '../Assets/Images/giftIcon.png';
 
 const LandingPage = () => {
 
@@ -67,7 +70,7 @@ const LandingPage = () => {
 
 
             {/* How is works section */}
-            <div className="w-full h-auto bg-[#0E063D] p-10 mx-auto flex flex-col z-10 text-center justify-center items-center">
+            <div className="w-full h-auto bg-[#0E063D] p-10 mx-auto flex flex-col z-10 text-center justify-center items-center relative">
                 <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">HOW IT <span className="text-[#00FADF]">WORKS</span> </h2>
                 <p className="text-white text-center">It’s easier than you think. Follow 4 simple easy steps</p>
 
@@ -140,13 +143,134 @@ const LandingPage = () => {
 
 
                 </div>
-                <div className="hero-btn sm:w-[160px] p-2  rounded-full bg-gradient-to-t from-[#F0B000] to-[#F029A0] text-white font-semibold mt-[100px] text-[0.7rem] sm:text-[1rem] w-[120px]">
+                <div className="hero-btn sm:w-[160px] p-2  rounded-full bg-gradient-to-t from-[#F0B000] to-[#F029A0] text-white font-semibold mt-[100px] text-[0.7rem] sm:text-[1rem] w-[120px] mb-20">
                     Enroll Now
                 </div>
+                <img src={howit} alt="" srcset="" className="w-full h-full object-cover absolute -z-10 " />
 
             </div>
 
             {/* How is works section */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {/* playerys of the week section */}
+
+            <div className="w-full h-auto bg-[#0E063D] p-10 mx-auto flex flex-col z-10 text-center justify-center items-center relative">
+                <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center"><span className="text-[#00FADF]">playerys </span>of the week </h2>
+                <p className="text-white text-center">We take a look at the best students of the week awarded</p>
+                <p className="text-white text-center">on Monday for the previous Monday to Sunday</p>
+            
+                <div className="sm:w-[80%] w-[90%] flex sm:flex-row flex-col p-5 sm:mt-[90px] sm:space-x-5 space-x-2 justify-center items-center mx-auto ">
+
+                    <div className="player-card-outter bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] p-[1px] rounded-2xl sm:mt-20 w-full mt-5 mb-5">
+                        <div className="player-card flex flex-col sm:w-[256px] sm:h-[400px] h-[400px] rounded-2xl items-center justify-center bg-[#0E063D] w-full ">
+                            <div className="player-image-box sm:w-[200px] sm:h-[200px] relative justify-center items-center flex flex-col">
+                            <img src={circle} alt="" srcset="" className="w-full h-full object-cover  z-10 " />
+                            <div className="player-profile-imgbox sm:w-[80px] sm:h-[80px]  absolute rounded-full ">
+                            <img src={pethz} alt="" srcset="" className="w-full h-full object-cover  z-20" />
+                            </div>
+                            </div>
+                            <div className="pc-info flex flex-col p-2 mt-3  text-center items-center">
+                                <span className="font-likn text-white font-semibold uppercase sm:text-[1.2rem]">Peth-Z</span>
+                                <div className="flex flex-row justify-between mt-2 space-x-2">
+                                    <span className="font-likn text-[#64BE56] font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]">1970 XP Earned</span>
+                                    <span className="font-likn text-white font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]">04/05 - 04/12</span>
+                                </div>
+                                <div className="flex flex-row justify-between mt-2 space-x-2">
+                                    <span className="font-likn text-[#64BE56] font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]"> <img src={giftico} alt="" srcset="" className="w-full h-full object-cover" /></span>
+                                    <span className="font-likn text-[#00FADF] font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]">+20 credits</span>
+                                </div>                            
+                            </div>
+                            <div className="hero-btn sm:w-[140px] p-2 sm:py-3 rounded-full bg-gradient-to-t from-[#F0B000] to-[#F029A0] text-white font-semibold  text-[0.7rem] sm:text-[0.8rem] w-[120px] sm:mt-5 uppercase">view profile</div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div className="player-card-outter bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] p-[1px] rounded-2xl sm:mt-5 w-full mt-5 mb-5">
+                        <div className="player-card flex flex-col sm:w-[256px] sm:h-[400px] h-[400px] rounded-2xl items-center justify-center bg-[#0E063D] w-full relative">
+                            <div className="player-image-box sm:w-[200px] sm:h-[200px] relative justify-center items-center flex flex-col">
+                            <img src={circle} alt="" srcset="" className="w-full h-full object-cover  z-10 " />
+                            <div className="player-profile-imgbox sm:w-[80px] sm:h-[80px]  absolute rounded-full ">
+                            <img src={pethz} alt="" srcset="" className="w-full h-full object-cover  z-20" />
+                            </div>
+                            </div>
+                            <div className="pc-info flex flex-col p-2 mt-3  text-center items-center">
+                                <span className="font-likn text-white font-semibold uppercase sm:text-[1.2rem]">Peth-Z</span>
+                                <div className="flex flex-row justify-between mt-2 space-x-2">
+                                    <span className="font-likn text-[#64BE56] font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]">1970 XP Earned</span>
+                                    <span className="font-likn text-white font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]">04/05 - 04/12</span>
+                                </div>
+                                <div className="flex flex-row justify-between mt-2 space-x-2">
+                                    <span className="font-likn text-[#64BE56] font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]"> <img src={giftico} alt="" srcset="" className="w-full h-full object-cover" /></span>
+                                    <span className="font-likn text-[#00FADF] font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]">+20 credits</span>
+                                </div>                            
+                            </div>
+                            <div className="rank-ico w-[30px] h-[90px] sm:w-[50px] sm:h-[100px] bg-[#E546BB] absolute top-0 right-5 z-20">
+
+                            </div>
+                            <div className="hero-btn sm:w-[140px] p-2 sm:py-3 rounded-full bg-gradient-to-t from-[#F0B000] to-[#F029A0] text-white font-semibold  text-[0.7rem] sm:text-[0.8rem] w-[120px] sm:mt-5 uppercase">view profile</div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div className="player-card-outter bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] p-[1px] rounded-2xl sm:mt-20 w-full mt-5 mb-5">
+                        <div className="player-card flex flex-col sm:w-[256px] sm:h-[400px] h-[400px] rounded-2xl items-center justify-center bg-[#0E063D] w-full ">
+                            <div className="player-image-box sm:w-[200px] sm:h-[200px] relative justify-center items-center flex flex-col">
+                            <img src={circle} alt="" srcset="" className="w-full h-full object-cover  z-10 " />
+                            <div className="player-profile-imgbox sm:w-[80px] sm:h-[80px]  absolute rounded-full ">
+                            <img src={pethz} alt="" srcset="" className="w-full h-full object-cover  z-20" />
+                            </div>
+                            </div>
+                            <div className="pc-info flex flex-col p-2 mt-3  text-center items-center">
+                                <span className="font-likn text-white font-semibold uppercase sm:text-[1.2rem]">Peth-Z</span>
+                                <div className="flex flex-row justify-between mt-2 space-x-2">
+                                    <span className="font-likn text-[#64BE56] font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]">1970 XP Earned</span>
+                                    <span className="font-likn text-white font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]">04/05 - 04/12</span>
+                                </div>
+                                <div className="flex flex-row justify-between mt-2 space-x-2">
+                                    <span className="font-likn text-[#64BE56] font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]"> <img src={giftico} alt="" srcset="" className="w-full h-full object-cover" /></span>
+                                    <span className="font-likn text-[#00FADF] font-semibold uppercase sm:text-[0.7rem] text-[0.5rem]">+20 credits</span>
+                                </div>                            
+                            </div>
+                            <div className="hero-btn sm:w-[140px] p-2 sm:py-3 rounded-full bg-gradient-to-t from-[#F0B000] to-[#F029A0] text-white font-semibold  text-[0.7rem] sm:text-[0.8rem] w-[120px] sm:mt-5 uppercase">view profile</div>
+                        </div>
+                    </div>
+                    
+
+
+
+
+
+
+
+                </div>
+            
+            
+            
+            
+            
+            
+            </div>
+
+
+
+
+            {/* playerys of the week section */}
 
         </div>
     );

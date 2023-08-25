@@ -50,7 +50,7 @@ const CourseCarousel = () => {
                     breakpoint: { max: 1024, min: 464 },
                     items: 2,
                     
-                    partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
+                    // partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
                 },
                 mobile: {
                     breakpoint: { max: 464, min: 0 },
