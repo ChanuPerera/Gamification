@@ -55,3 +55,8 @@ code {
   background: rgb(240,176,0) !important;
 background: linear-gradient(0deg, rgba(240,176,0,1) 0%, rgba(240,41,160,1) 100%) !important;
 }
+
+.hex
+{
+  clip-path: polygon(50% 0, 100% 23%, 100% 79%, 50% 100%, 0 81%, 0 23%);
+}
