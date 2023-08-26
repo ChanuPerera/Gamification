@@ -28,6 +28,7 @@ const CourseCarousel = () => {
             centerMode={false}
             className=""
             containerClass="container-with-dots"
+            
             dotListClass=""
             draggable
             focusOnSelect={false}

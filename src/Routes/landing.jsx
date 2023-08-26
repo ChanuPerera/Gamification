@@ -28,7 +28,8 @@ import cr3 from '../Assets/Images/Ellipse 519.png';
 import cr4 from '../Assets/Images/Ellipse 520.png';
 import cr5 from '../Assets/Images/Ellipse 521.png';
 import cr6 from '../Assets/Images/Ellipse 522.png';
-
+import orbg from '../Assets/Images/orbg.png';
+import ReviewSlider from "../Components/reviewsSlider";
 
 
 
@@ -239,7 +240,7 @@ const LandingPage = () => {
           srcset=""
           className="w-full h-full object-cover absolute -z-10 "
         />
-        
+
       </div>
 
       {/* How is works section */}
@@ -436,65 +437,104 @@ const LandingPage = () => {
 
 
 
-        {/* our students review */}
-        <div className="w-full h-auto bg-[#0E063D] p-10 mx-auto flex flex-col z-10 text-center justify-center items-center relative">
-            <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
-            our students <span className="text-[#00FADF]">reviews</span>{" "}
-            </h2>
-            <p className="text-white text-center">
-            the biggest esports tournaments anytime, anywhere
-            </p>
-
-            {/* <img
-          src={cr1}
-          alt=""
-          srcset=""
-          className="w-full h-full  absolute -z-10 "
-        /> */}
-        {/* <img
-          src={cr2}
-          alt=""
-          srcset=""
-          className="w-full h-full  absolute -z-10 "
-        />
-        <img
-          src={cr3}
-          alt=""
-          srcset=""
-          className="w-full h-full  absolute -z-10 "
-        />
-        <img
-          src={cr4}
-          alt=""
-          srcset=""
-          className="w-full h-full  absolute -z-10 "
-        />
-        <img
-          src={cr5}
-          alt=""
-          srcset=""
-          className="w-full h-full  absolute -z-10 "
-        />
-        <img
-          src={cr6}
-          alt=""
-          srcset=""
-          className="w-full h-full  absolute -z-10 "
-        /> */}
 
 
 
-<img
-          src={cr6}
-          alt=""
-          srcset=""
-          className="w-full h-full  absolute -z-10 "
-        />
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* our students review */}
+      <div className="w-full h-auto bg-[#0E063D] p-10 mx-auto flex flex-col z-10 text-center justify-center items-center relative">
+        <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
+          our students <span className="text-[#00FADF]">reviews</span>{" "}
+        </h2>
+        <p className="text-white text-center">
+          the biggest esports tournaments anytime, anywhere
+        </p>
+
+        <div className="cuttomer-review-outer w-[70%] sm:w-[50%] rounded-2xl p-[1px] bg-gradient-to-t from-[#6148FF] to-[#EDB8FF] absolute">
+          <div className="player-card flex flex-col sm:h-[300px] h-[300px] rounded-2xl items-center justify-center bg-[#0E063D] w-full relative ">
+            <div className="w-[80%] ">
+
+              <ReviewSlider />
+            </div>
+
+          </div>
         </div>
 
 
-        {/* our students review */}
+
+
+
+
+        <div className=" w-[80%] sm:w-full h-[60vh]  flex-row mt-[80px] relative flex">
+          <img
+            src={cr1}
+            alt=""
+            srcset=""
+            className=" absolute sm:block hidden -z-10 bottom-2 left-20 sm:w-[80px]"
+          />
+          <img
+            src={cr2}
+            alt=""
+            srcset=""
+            className="  absolute sm:block hidden -z-10 left-0 top-1/3 sm:w-[140px]"
+          />
+          <img
+            src={cr3}
+            alt=""
+            srcset=""
+            className="  absolute  sm:block hidden -z-10  left-20 sm:w-[60px]"
+          />
+          <img
+            src={cr4}
+            alt=""
+            srcset=""
+            className="  absolute sm:block hidden -z-10 right-0 sm:w-[120px]"
+          />
+          <img
+            src={cr5}
+            alt=""
+            srcset=""
+            className="  absolute sm:block hidden -z-10 top-1/2 right-0 sm:w-[100px]"
+          />
+          <img
+            src={cr6}
+            alt=""
+            srcset=""
+            className="  absolute sm:block hidden -z-10 bottom-10 right-20"
+          />
+        </div>
+
+
+        <img
+          src={orbg}
+          alt=""
+          srcset=""
+          className="w-full h-full object-cover  absolute -z-10 "
+        />
+
+
+
+      </div>
+
+
+      {/* our students review */}
 
 
 
