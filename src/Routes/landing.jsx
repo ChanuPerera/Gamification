@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/heading-has-content */
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -30,6 +31,29 @@ import cr5 from '../Assets/Images/Ellipse 521.png';
 import cr6 from '../Assets/Images/Ellipse 522.png';
 import orbg from '../Assets/Images/orbg.png';
 import ReviewSlider from "../Components/reviewsSlider";
+import Gamepad from '../Assets/Images/Gamepad.png';
+import userheart from '../Assets/Images/User Heart.png';
+import chatbot from '../Assets/Images/Chat Dots.png';
+import Clock from '../Assets/Images/Clock Circle.png';
+import shield from '../Assets/Images/Shield Check.png';
+import cup from '../Assets/Images/Cup.png';
+import difbg from '../Assets/Images/differncebg-01.png';
+import assignment from '../Assets/Images/assignment.png';
+import win from '../Assets/Images/win.png';
+import gamecontroller from '../Assets/Images/gamecontroller.png';
+import rankbadge from '../Assets/Images/rankbadge.png';
+import rb1 from '../Assets/Images/rb1.png';
+import rb2 from '../Assets/Images/rb2.png';
+import rb3 from '../Assets/Images/rb3.png';
+import rb4 from '../Assets/Images/rb4.png';
+import rb5 from '../Assets/Images/rb5.png';
+import rb6 from '../Assets/Images/rb6.png';
+import gprofile from '../Assets/Images/gamer-profile-image.png';
+import gameillustration from '../Assets/Images/gaming illustration.png';
+import circle3 from '../Assets/Images/circle3.png';
+import mailico from '../Assets/Images/mailico.png';
+import footerbg from '../Assets/Images/footerimg.png';
+
 
 
 
@@ -459,7 +483,7 @@ const LandingPage = () => {
 
 
       {/* our students review */}
-      <div className="w-full h-auto bg-[#0E063D] p-10 mx-auto flex flex-col z-10 text-center justify-center items-center relative">
+      <div className="w-full h-auto bg-[#0E063D] p-10 mx-auto flex flex-col z-10 text-center justify-center items-center relative sm:mt-[128px]">
         <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
           our students <span className="text-[#00FADF]">reviews</span>{" "}
         </h2>
@@ -545,6 +569,430 @@ const LandingPage = () => {
 
 
 
+      {/* our Difference */}
+      <div className="w-full h-auto bg-[#0E063D] p-10 mx-auto flex flex-col z-10 text-center justify-center items-center relative sm:mt-[128px] sm:mb-[80px]">
+        <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
+          What is our <span className="text-[#00FADF]">difference</span>{" "}
+        </h2>
+        <p className="text-white text-center">
+          the biggest esports tournaments anytime, anywhere
+        </p>
+
+
+
+        <div className="sm:w-[80%] h-auto flex sm:flex-row mt-5">
+
+          <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
+            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+                <img
+                  src={Gamepad}
+                  alt=""
+                  srcset=""
+                  className="object-center sm:w-[80px] sm:h-[80px]"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col w-full text-center mt-3">
+              <h4 className="font-link text-white text-center sm:text-[1.5rem] uppercase">Gamification learn</h4>
+              <p className="text-gray-300 text-center sm:text-[12px]">Motivate and engage individuals to achieve specific goals.</p>
+            </div>
+          </div>
+
+
+          <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
+            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+                <img
+                  src={userheart}
+                  alt=""
+                  srcset=""
+                  className="object-center sm:w-[80px] sm:h-[80px]"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col w-full text-center mt-3">
+              <h4 className="font-link text-white text-center sm:text-[1.5rem] uppercase">assist personally</h4>
+              <p className="text-gray-300 text-center sm:text-[12px]">Assist students effectively through the implementation of gamification learning technologies.</p>
+            </div>
+          </div>
+
+
+
+          <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
+            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+                <img
+                  src={Clock}
+                  alt=""
+                  srcset=""
+                  className="object-center sm:w-[80px] sm:h-[80px]"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col w-full text-center mt-3">
+              <h4 className="font-link text-white text-center sm:text-[1.5rem] uppercase">Continuously monitor</h4>
+              <p className="text-gray-300 text-center sm:text-[12px]">Motivate and engage individuals to achieve specific goals.</p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <div className="sm:w-[80%] h-auto flex sm:flex-row mt-5">
+
+          <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
+            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+                <img
+                  src={cup}
+                  alt=""
+                  srcset=""
+                  className="object-center sm:w-[80px] sm:h-[80px]"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col w-full text-center mt-3">
+              <h4 className="font-link text-white text-center sm:text-[1.5rem] uppercase">Play at your Level</h4>
+              <p className="text-gray-300 text-center sm:text-[12px]">With ranked divisions we help you find the right level to compete your lessons and assignments.</p>
+            </div>
+          </div>
+
+
+          <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
+            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+                <img
+                  src={chatbot}
+                  alt=""
+                  srcset=""
+                  className="object-center sm:w-[80px] sm:h-[80px]"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col w-full text-center mt-3">
+              <h4 className="font-link text-white text-center sm:text-[1.5rem] uppercase">chatbot help</h4>
+              <p className="text-gray-300 text-center sm:text-[12px]">Encourage students to work together on programming challenges and create virtual study groups.</p>
+            </div>
+          </div>
+
+
+
+          <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
+            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+                <img
+                  src={shield}
+                  alt=""
+                  srcset=""
+                  className="object-center sm:w-[80px] sm:h-[80px]"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col w-full text-center mt-3">
+              <h4 className="font-link text-white text-center sm:text-[1.5rem] uppercase">Real-time detect</h4>
+              <p className="text-gray-300 text-center sm:text-[12px]">Real-time detect and flag malicious injections of user end</p>
+            </div>
+          </div>
+
+        </div>
+
+        <img
+          src={difbg}
+          alt=""
+          srcset=""
+          className="w-full h-full object-cover absolute -z-10 "
+        />
+
+
+
+
+      </div>
+      {/* our Difference */}
+
+
+
+
+
+
+
+
+
+
+
+      {/* Build your Profile */}
+
+      <div className="w-full sm:h-[80vh] bg-[#0E063D]  mx-auto flex sm:flex-row flex-col z-10 text-center justify-between items-center relative sm:mt-[128px] sm:mb-[80px]">
+
+        <div className="sm:w-1/2 flex flex-col sm:text-left sm:p-[50px]  text-center p-5 w-full">
+          <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase sm:text-left">
+            Build Your<br />
+            learning <span className="text-[#00FADF]">Profile</span>
+          </h2>
+          <p className="text-white text-left">
+            Showcase your achievements, learning history and win rate while you build your reputation on CodeQuest.
+          </p>
+
+          <div className="sm:w-[120px] text-center flex justify-center items-center border-[1px] rounded-full py-3 border-[#EDB8FF] bag-[#0E063D] mt-3">
+            <span className="text-white sm:text-[0.8rem] lg:text-[1rem] text-[12px] capitalize">Sign up free</span>
+          </div>
+
+        </div>
+
+
+        <div className="sm:w-1/2 w-full content-wrapper justify-center sm:p-[50px] mt-[128px] sm:mt-0">
+
+          <div className="content-form w-2/3 sm:h-[400px] bg-[#4609C3] rounded-2xl relative flex flex-col mx-auto">
+
+
+
+            <div className="w-[80%] sm:h-[180px] justify-between items-center absolute left-1/2 -translate-x-1/2 border-collapse border-b-[1px] border-white border-opacity-20 flex flex-row">
+              <div className="w-1/2 flex flex-col relative">
+                <div className="gamer-profile-img sm:w-[80px] sm:h-[80px] lg:w-[100px] lg:h-[100px]  rounded-md absolute -top-[100px]">
+                  <img src={gprofile} alt="" srcset="" className="object-cover w-full h-full rounded-md" />
+                </div>
+                <h4 className="font-link text-white text-left sm:text-[1rem] uppercase lg:mt-3">Aldo Boudreau</h4>
+                <p className="text-white text-left text-opacity-40">
+                  Student
+                </p>
+
+              </div>
+
+              <div className="flex flex-wrap  justify-center space-x-2">
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                  <img src={rb1} alt="" srcset="" className="" />
+                </div>
+
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                  <img src={rb2} alt="" srcset="" className="" />
+                </div>
+
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                  <img src={rb3} alt="" srcset="" className="" />
+                </div>
+
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                  <img src={rb4} alt="" srcset="" className="" />
+                </div>
+
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                  <img src={rb5} alt="" srcset="" className="" />
+                </div>
+
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                  <img src={rb6} alt="" srcset="" className="" />
+                </div>
+              </div>
+            </div>
+
+
+            <div className="sm:mt-[200px] flex flex-col w-[80%] mx-auto">
+              <table >
+                <tr>
+                  <td className="py-2 sm:w-2/3 text-white text-left flex flex-row ">
+                    <img src={assignment} alt="" srcset="" className="mr-2" /> Assignments
+                  </td>
+                  <td className="w-full text-white text-right">313</td>
+                </tr>
+
+
+                <tr>
+                  <td className="py-2 sm:w-2/3 text-white text-left flex flex-row ">
+                    <img src={win} alt="" srcset="" className="mr-2" />Win
+                  </td>
+                  <td className="w-full text-white text-right">13</td>
+                </tr>
+
+
+                <tr>
+                  <td className="py-2 w-full  flex flex-row justify-center items-center">
+                    <img src={gamecontroller} alt="" srcset="" className="mr-2" /><div className="w-full h-[4px] bg-white bg-opacity-20"></div>
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td className="py-2 w-full  flex flex-row justify-center items-center ">
+                    <img src={rankbadge} alt="" srcset="" className="mr-2" /><div className="w-full h-[4px] bg-white bg-opacity-20"></div>
+                  </td>
+                </tr>
+
+
+              </table>
+            </div>
+
+
+
+          </div>
+
+
+
+
+        </div>
+        <img
+          src={gameillustration}
+          alt=""
+          srcset=""
+          className="w-full h-full object-cover absolute -z-10 opacity-20"
+        />
+
+
+      </div>
+
+      {/* Build your Profile */}
+
+
+
+
+
+      {/* footer */}
+
+      <div className="w-full sm:h-[30vh] bg-[#0E063D]  mx-auto flex sm:flex-row flex-col z-10 text-center justify-between items-center relative sm:mt-[426px] sm:mb-[80px] mt-[200px]">
+
+        <div className="footer-body p-5 sm:w-[80%] sm:h-[60vh]  mx-auto justify-center items-center  flex flex-col ">
+
+
+          <div className="newsletter flex justify-center flex-col sm:h-[60vh] text-center  w-full rounded-2xl relative sm:-mt-[128px]">
+            <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
+              subscribe to our <br />newsletter
+            </h2>
+            <p className="text-white text-center opacity-40">
+              Receive news, stay updated and special offers
+            </p>
+
+            <div className="mt-5 sm:w-[50%] mx-auto sm:h-[60px] h-[44px] bg-[#142A8D] flex flex-row border-[1px] rounded-full  border-[#EDB8FF]  items-center relative">
+                <input type="text" name="name" className="sm:w-2/4 lg:w-3/5 sm:ml-[10px] bg-transparent outline-none text-white" placeholder="Your Email address"/>
+                <div className="rounded-full justify-center items-center right-[5px] flex absolute bg-gradient-to-t from-[#F0B000] to-[#F029A0] sm:h-[50px] sm:w-1/3 ld:w-1/5">
+                  <span className="text-white upper sm:text-[1rem] text-[12px] lg:text-[1rem] font-semibold  uppercase"> subscribe</span>
+                </div>
+            </div>
+            <img
+              src={circle3}
+              alt=""
+              srcset=""
+              className="w-full h-full object-cover absolute -z-10 rounded-2xl"
+            />
+
+            <img
+              src={mailico}
+              alt=""
+              srcset=""
+              className=" absolute -z-10 rounded-2xl left-0"
+            />
+
+            <img
+              src={mailico}
+              alt=""
+              srcset=""
+              className=" absolute -z-10 rounded-2xl right-0 transform -scale-x-100"
+            />
+          </div>
+
+          <div className="footer-content w-full h-full flex flex-row justify-between">
+
+          <div className="mt-10 flex sm:flex-row flex-col w-full justify-between text-left ">
+              
+              <div className="footer-link text-left sm:mb-0 mb-5">
+                  <h5 className="font-link uppercase sm:text-[1rem] text-white font-semibold mb-3">About Us</h5>
+                  <ul className="leading-8">
+                    <li className="text-white opacity-60 capitalize">
+                      About us
+                    </li>
+                    <li className="text-white opacity-60 capitalize">
+                      contact us
+                    </li >
+                    <li className="text-white opacity-60 capitalize">
+                      latest blog
+                    </li>
+                  </ul>
+              </div>
+
+
+              <div className="footer-link text-left sm:mb-0 mb-5">
+                  <h5 className="font-link uppercase sm:text-[1rem] text-white font-semibold mb-3">My account</h5>
+                  <ul className="leading-8 text-left">
+                    <li className="text-white opacity-60 capitalize">
+                      manage your account
+                    </li>
+                    
+                  </ul>
+              </div>
+
+
+              <div className="footer-link text-left sm:mb-0 mb-5">
+                  <h5 className="font-link uppercase sm:text-[1rem] text-white font-semibold mb-3">help center</h5>
+                  <ul className="leading-8 text-left">
+                    <li className="text-white opacity-60 capitalize">
+                      help center
+                    </li>
+                    <li className="text-white opacity-60 uppercase">
+                      faq
+                    </li >
+                    <li className="text-white opacity-60 capitalize">
+                      quick start guide
+                    </li>
+                    <li className="text-white opacity-60 capitalize">
+                      tutorials
+                    </li>
+                  </ul>
+              </div>
+
+
+
+              <div className="footer-link text-left sm:mb-0 mb-5">
+                  <h5 className="font-link uppercase sm:text-[1rem] text-white font-semibold mb-3">legal info</h5>
+                  <ul className="leading-8">
+                    <li className="text-white opacity-60 capitalize">
+                      risk warnings
+                    </li>
+                    <li className="text-white opacity-60 capitalize">
+                      privacy notice
+                    </li >
+                    <li className="text-white opacity-60 capitalize">
+                      terms of service
+                    </li>
+                    <li className="text-white opacity-60 capitalize">
+                     become affiliate
+                    </li>
+                  </ul>
+              </div>
+
+
+          </div>
+
+
+             
+          </div>  
+
+          <div className="w-full sm:h-[56px] bg-slate-100 ">
+
+          </div>
+
+        </div>
+
+
+       
+       
+
+        <img
+              src={footerbg}
+              alt=""
+              srcset=""
+              className="w-full h-full sm:h-[50vh] object-cover absolute -z-10 "
+            />
+
+
+      </div>
+
+
+
+
+
+      {/* footer */}
 
 
 
