@@ -139,7 +139,7 @@ const LandingPage = () => {
         <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
           HOW IT <span className="text-[#00FADF]">WORKS</span>{" "}
         </h2>
-        <p className="text-white text-center">
+        <p className="text-white text-center opacity-60">
           It’s easier than you think. Follow 4 simple easy steps
         </p>
 
@@ -278,10 +278,10 @@ const LandingPage = () => {
         <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
           <span className="text-[#00FADF]">playerys </span>of the week{" "}
         </h2>
-        <p className="text-white text-center">
+        <p className="text-white text-center opacity-60">
           We take a look at the best students of the week awarded
         </p>
-        <p className="text-white text-center">
+        <p className="text-white text-center opacity-60">
           on Monday for the previous Monday to Sunday
         </p>
 
@@ -487,7 +487,7 @@ const LandingPage = () => {
         <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
           our students <span className="text-[#00FADF]">reviews</span>{" "}
         </h2>
-        <p className="text-white text-center">
+        <p className="text-white text-center opacity-60">
           the biggest esports tournaments anytime, anywhere
         </p>
 
@@ -574,17 +574,17 @@ const LandingPage = () => {
         <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
           What is our <span className="text-[#00FADF]">difference</span>{" "}
         </h2>
-        <p className="text-white text-center">
+        <p className="text-white text-center opacity-60">
           the biggest esports tournaments anytime, anywhere
         </p>
 
 
 
-        <div className="sm:w-[80%] h-auto flex sm:flex-row mt-5">
+        <div className="sm:w-[80%] h-auto flex sm:flex-row flex-col mt-5">
 
           <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
-            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
-              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+            <div className="outer-circle w-[128px] h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle w-[118px] h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
                 <img
                   src={Gamepad}
                   alt=""
@@ -601,8 +601,8 @@ const LandingPage = () => {
 
 
           <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
-            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
-              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+            <div className="outer-circle w-[128px] h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle w-[118px] h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
                 <img
                   src={userheart}
                   alt=""
@@ -620,8 +620,8 @@ const LandingPage = () => {
 
 
           <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
-            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
-              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+            <div className="outer-circle w-[128px] h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle w-[118px] h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
                 <img
                   src={Clock}
                   alt=""
@@ -643,11 +643,11 @@ const LandingPage = () => {
 
 
 
-        <div className="sm:w-[80%] h-auto flex sm:flex-row mt-5">
+        <div className="sm:w-[80%] h-auto flex sm:flex-row mt-5 flex-col">
 
           <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
-            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
-              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+            <div className="outer-circle w-[128px] h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle w-[118px] h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
                 <img
                   src={cup}
                   alt=""
@@ -664,8 +664,8 @@ const LandingPage = () => {
 
 
           <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
-            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
-              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+            <div className="outer-circle w-[128px] h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle w-[118px] h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
                 <img
                   src={chatbot}
                   alt=""
@@ -683,8 +683,8 @@ const LandingPage = () => {
 
 
           <div className="def-card sm:w-1/3 md:1/3 lg:w-1/3 p-3 text-center mt-[120px] items-center flex flex-col">
-            <div className="outer-circle sm:w-[128px] sm:h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
-              <div className="inner-circle sm:w-[118px] sm:h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
+            <div className="outer-circle w-[128px] h-[128px] bg-[#4609C3] rounded-full justify-center items-center bg-opacity-40 flex">
+              <div className="inner-circle w-[118px] h-[118px] bg-[#4609C3] rounded-full justify-center items-center flex">
                 <img
                   src={shield}
                   alt=""
@@ -726,31 +726,34 @@ const LandingPage = () => {
 
       {/* Build your Profile */}
 
-      <div className="w-full sm:h-[80vh] bg-[#0E063D]  mx-auto flex sm:flex-row flex-col z-10 text-center justify-between items-center relative sm:mt-[128px] sm:mb-[80px]">
+      <div className="w-full h-[80vh] bg-[#0E063D]  mx-auto flex sm:flex-row flex-col z-10 text-center justify-between items-center relative sm:mt-[128px] sm:mb-[80px] mt-[128px]">
 
-        <div className="sm:w-1/2 flex flex-col sm:text-left sm:p-[50px]  text-center p-5 w-full">
-          <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase sm:text-left">
+        <div className="sm:w-1/2 flex flex-col sm:text-left sm:p-[50px]  text-center p-5 w-full ">
+          <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase sm:text-left ">
             Build Your<br />
             learning <span className="text-[#00FADF]">Profile</span>
           </h2>
-          <p className="text-white text-left">
+          <p className="text-white sm:text-left text-center opacity-60">
             Showcase your achievements, learning history and win rate while you build your reputation on CodeQuest.
           </p>
 
-          <div className="sm:w-[120px] text-center flex justify-center items-center border-[1px] rounded-full py-3 border-[#EDB8FF] bag-[#0E063D] mt-3">
+          <div className="sm:w-[120px] text-center flex justify-center items-center border-[1px] rounded-full py-3 border-[#EDB8FF] bag-[#0E063D] sm:mt-5 mt-[20px]">
             <span className="text-white sm:text-[0.8rem] lg:text-[1rem] text-[12px] capitalize">Sign up free</span>
           </div>
 
         </div>
 
 
+
+
+
         <div className="sm:w-1/2 w-full content-wrapper justify-center sm:p-[50px] mt-[128px] sm:mt-0">
 
-          <div className="content-form w-2/3 sm:h-[400px] bg-[#4609C3] rounded-2xl relative flex flex-col mx-auto">
+          <div className="content-form w-2/3 h-[400px] bg-[#4609C3] rounded-2xl relative flex flex-col mx-auto">
 
 
 
-            <div className="w-[80%] sm:h-[180px] justify-between items-center absolute left-1/2 -translate-x-1/2 border-collapse border-b-[1px] border-white border-opacity-20 flex flex-row">
+            <div className="w-[80%] h-[180px] justify-between items-center absolute left-1/2 -translate-x-1/2 border-collapse border-b-[1px] border-white border-opacity-20 flex flex-row">
               <div className="w-1/2 flex flex-col relative">
                 <div className="gamer-profile-img sm:w-[80px] sm:h-[80px] lg:w-[100px] lg:h-[100px]  rounded-md absolute -top-[100px]">
                   <img src={gprofile} alt="" srcset="" className="object-cover w-full h-full rounded-md" />
@@ -763,34 +766,34 @@ const LandingPage = () => {
               </div>
 
               <div className="flex flex-wrap  justify-center space-x-2">
-                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative w-[30px] h-[30px]">
                   <img src={rb1} alt="" srcset="" className="" />
                 </div>
 
-                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative w-[30px] h-[30px]">
                   <img src={rb2} alt="" srcset="" className="" />
                 </div>
 
-                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative w-[30px] h-[30px] ">
                   <img src={rb3} alt="" srcset="" className="" />
                 </div>
 
-                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative w-[30px] h-[30px]">
                   <img src={rb4} alt="" srcset="" className="" />
                 </div>
 
-                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative w-[30px] h-[30px]">
                   <img src={rb5} alt="" srcset="" className="" />
                 </div>
 
-                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative ">
+                <div className="sm:w-[40px] sm:h-[40px] lg:w-[80px] lg:h-[80px] relative w-[30px] h-[30px]">
                   <img src={rb6} alt="" srcset="" className="" />
                 </div>
               </div>
             </div>
 
 
-            <div className="sm:mt-[200px] flex flex-col w-[80%] mx-auto">
+            <div className="mt-[200px] flex flex-col w-[80%] mx-auto">
               <table >
                 <tr>
                   <td className="py-2 sm:w-2/3 text-white text-left flex flex-row ">
@@ -849,14 +852,23 @@ const LandingPage = () => {
 
 
 
+
+
+
+
+
+
+
+
+
       {/* footer */}
 
-      <div className="w-full sm:h-[30vh] bg-[#0E063D]  mx-auto flex sm:flex-row flex-col z-10 text-center justify-between items-center relative sm:mt-[426px] sm:mb-[80px] mt-[200px]">
+      <div className="w-full sm:h-[30vh] bg-[#0E063D]  mx-auto flex sm:flex-row flex-col z-10 text-center justify-between items-center relative  sm:mb-[80px] mt-[426px]">
 
         <div className="footer-body p-5 sm:w-[80%] sm:h-[60vh]  mx-auto justify-center items-center  flex flex-col ">
 
 
-          <div className="newsletter flex justify-center flex-col sm:h-[60vh] text-center  w-full rounded-2xl relative sm:-mt-[128px]">
+          <div className="newsletter flex justify-center flex-col sm:h-[60vh] h-[40vh] text-center  w-full rounded-2xl relative sm:-mt-[128px] -mt-[128px]">
             <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
               subscribe to our <br />newsletter
             </h2>
@@ -865,9 +877,9 @@ const LandingPage = () => {
             </p>
 
             <div className="mt-5 sm:w-[50%] mx-auto sm:h-[60px] h-[44px] bg-[#142A8D] flex flex-row border-[1px] rounded-full  border-[#EDB8FF]  items-center relative">
-                <input type="text" name="name" className="sm:w-2/4 lg:w-3/5 sm:ml-[10px] bg-transparent outline-none text-white" placeholder="Your Email address"/>
-                <div className="rounded-full justify-center items-center right-[5px] flex absolute bg-gradient-to-t from-[#F0B000] to-[#F029A0] sm:h-[50px] sm:w-1/3 ld:w-1/5">
-                  <span className="text-white upper sm:text-[1rem] text-[12px] lg:text-[1rem] font-semibold  uppercase"> subscribe</span>
+                <input type="text" name="name" className="sm:w-2/4 lg:w-3/5 w-2/5 ml-[10px]  bg-transparent outline-none text-white" placeholder="Your Email address"/>
+                <div className="rounded-full justify-center items-center sm:right-[5px] right-[3px] flex absolute bg-gradient-to-t from-[#F0B000] to-[#F029A0] sm:h-[50px] sm:w-1/3 ld:w-1/5 h-[36px] w-1/3">
+                  <span className="text-white upper sm:text-[1rem] text-[10px] lg:text-[1rem] font-semibold  uppercase"> subscribe</span>
                 </div>
             </div>
             <img
@@ -881,14 +893,14 @@ const LandingPage = () => {
               src={mailico}
               alt=""
               srcset=""
-              className=" absolute -z-10 rounded-2xl left-0"
+              className=" absolute -z-10 rounded-2xl left-0 w-1/3"
             />
 
             <img
               src={mailico}
               alt=""
               srcset=""
-              className=" absolute -z-10 rounded-2xl right-0 transform -scale-x-100"
+              className=" absolute -z-10 rounded-2xl right-0 transform -scale-x-100 w-1/3"
             />
           </div>
 
@@ -968,8 +980,13 @@ const LandingPage = () => {
              
           </div>  
 
-          <div className="w-full sm:h-[56px] bg-slate-100 ">
+          <div className="w-full sm:h-[5px] border-collapse border-t-[1px] border-opacity-30 border-white ">
 
+          </div>
+
+
+          <div className="w-full sm:h-[56px] mt-[20px] ">
+              <span className="text-white opacity-60">Copyright @ 2023. All Right Reserved By CodeQuest</span>
           </div>
 
         </div>
