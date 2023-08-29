@@ -1,20 +1,35 @@
-import Quize from "./Routes/Quize";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import LandingPage from "./Routes/landing";
-import MainNav from "./Components/mainNav";
 
-
-
+import React from 'react';
+import { BrowserRouter, Route, Routes, useRoutes } from 'react-router-dom';
+import LandingPage from './Routes/landing';
+import MainNav from './Components/mainNav';
+import Login from './Routes/Login';
+import Enroll from './Routes/Enroll';
 
 function App() {
   return (
     <BrowserRouter>
-   <MainNav/>
-      <Routes>
-        <Route path="/" element={<LandingPage/>}/>
-      </Routes>
+      <RouterOutlet />
     </BrowserRouter>
+  );
+}
+
+function RouterOutlet() {
+  const element = useRoutes([
+    { path: '/', element: <MainNavWrapper /> },
+    { path: 'Login', element: <Login /> },
+    { path: 'Enroll', element: <Enroll /> },
+  ]);
+
+  return element;
+}
+
+function MainNavWrapper({ children }) {
+  return (
+    <>
+      <MainNav />
+      {<LandingPage/>}
+    </>
   );
 }
 

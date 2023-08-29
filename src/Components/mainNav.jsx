@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCheck } from "@fortawesome/free-solid-svg-icons";
 import logo from '../Assets/Images/logo2.png';
+import { Link } from "react-router-dom";
 
 
 const MainNav = () => {
@@ -32,15 +33,15 @@ const MainNav = () => {
             <div className="nav-links justify-center s:w-[30%] lg:w-[20%] sm:flex flex-row hidden">
                 <ul className="flex flex-row space-x-3 w-full">
                     <li>
-                        <div className="lg:w-[180px] sm:w-[100px] h-[36px] border-[#F0B000] border-[1px] flex justify-center items-center rounded-full">
+                    <Link to="/Login"><div className="lg:w-[180px] sm:w-[100px] h-[36px] border-[#F0B000] border-[1px] flex justify-center items-center rounded-full">
                                 <span className="capitalize text-white sm:text-[0.8rem] font-semibold">Login</span>
-                        </div>
+                        </div></Link>
                     </li>
 
                     <li>
-                        <div className="lg:w-[180px] sm:w-[100px] h-[36px] flex justify-center items-center rounded-full bg-gradient-to-t from-[#F0B000] to-[#F029A0]">
+                    <Link to="/Enroll"><div className="lg:w-[180px] sm:w-[100px] h-[36px] flex justify-center items-center rounded-full bg-gradient-to-t from-[#F0B000] to-[#F029A0]">
                                 <span className="capitalize text-white sm:text-[0.8rem] font-semibold">Enroll Now</span>
-                        </div>
+                        </div></Link>
                     </li>
                    
                 </ul>

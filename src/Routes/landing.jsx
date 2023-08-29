@@ -53,7 +53,7 @@ import gameillustration from '../Assets/Images/gaming illustration.png';
 import circle3 from '../Assets/Images/circle3.png';
 import mailico from '../Assets/Images/mailico.png';
 import footerbg from '../Assets/Images/footerimg.png';
-
+import { Link } from "react-router-dom";
 
 
 
@@ -84,16 +84,16 @@ const LandingPage = () => {
             <div className="sm:p-5 rounded-full bg-slate-600"></div>
           </div>
           <span className="text-white">100+ students online</span>
-          <div className="hero-btn lg:w-[180px] p-2  rounded-full mt-2 bg-gradient-to-t from-[#F0B000] to-[#F029A0] text-white font-semibold">
+          <Link to="/SignUp"><div className="hero-btn lg:w-[180px] p-2  rounded-full mt-2 bg-gradient-to-t from-[#F0B000] to-[#F029A0] text-white font-semibold z-30 cursor-pointer">
             Enroll Now
-          </div>
+          </div></Link>
         </div>
 
         <img
           src={herobannerfront}
           alt=""
           srcset=""
-          className="sm:w-full sm:h-screen sm:object-cover sm:justify-center absolute hidden sm:block z-20"
+          className="sm:w-full sm:h-screen sm:object-cover sm:justify-center absolute hidden sm:block z-0"
         />
         <img
           src={gamer1}
