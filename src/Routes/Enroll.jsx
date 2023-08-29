@@ -1,7 +1,8 @@
 import { useState } from "react";
 import logo from '../Assets/Images/logo2.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faCheck, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import {    faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 import difbg from '../Assets/Images/differncebg-01.png';
 
@@ -32,8 +33,8 @@ const Enroll = () => {
 
     return (
         <div className="w-full h-screen bg-[#0E063D] overflow-hidden">
-
-            <div className="nav-wrapper w-full   fixed flex flex-col top-0 items-center justify-center bg-white bg-opacity-10 border-collapse border-b-[1px] border-opacity-40 border-white backdrop-blur-sm z-50">
+            
+            <div className="nav-wrapper w-full  h-[168px] fixed flex flex-col top-0 items-center justify-center bg-white bg-opacity-10 border-collapse border-b-[1px] border-opacity-40 border-white backdrop-blur-sm z-50">
 
 
                 <div className="top-row w-full">
@@ -50,26 +51,26 @@ const Enroll = () => {
 
                 <div className="bottom-row w-full border-collapse border-t-[1px] border-white border-opacity-30">
                     <div className="flex flex-row full ">
-                        <div className="w-1/3 flex flex-row p-5 bg-[#0E063D] bg-opacity-40 justify-center space-x-10">
+                        <div className="w-1/3 flex flex-row p-5 bg-[#0E063D] bg-opacity-40 justify-center items-center space-x-10">
                             <div className="flex flex-col">
-                                <h4>Student Details</h4>
-                                <p>Enter your Details</p>
+                                <h4 className="text-white" >Student Details</h4>
+                                <p className="text-white opacity-50">Enter your Details</p>
                             </div>
-                            <div>icon</div>
+                            <div className="text-[#28C600] sm:text-[1.7rem]"><FontAwesomeIcon icon={faCircleCheck} /></div>
                         </div>
-                        <div className="w-1/3 flex flex-row p-5 justify-center space-x-10">
+                        <div className="w-1/3 flex flex-row p-5 justify-center items-center space-x-10 bg-[#606060] bg-opacity-40 ">
                             <div className="flex flex-col">
-                                <h4>Student Details</h4>
-                                <p>Enter your Details</p>
+                                <h4 className="text-white">Overall questions of C Language</h4>
+                                <p className="text-white opacity-50">Answer all the questions </p>
                             </div>
-                            <div>icon</div>
+                            {/* <div>icon</div> */}
                         </div>
-                        <div className="w-1/3 flex flex-row p-5 justify-center space-x-10">
+                        <div className="w-1/3 flex flex-row p-5 justify-center items-center space-x-10 bg-[#606060] bg-opacity-40">
                             <div className="flex flex-col">
-                                <h4>Student Details</h4>
-                                <p>Enter your Details</p>
+                                <h4 className="text-white">Create Profile</h4>
+                                <p className="text-white opacity-50">Automatically generated</p>
                             </div>
-                            <div>icon</div>
+                            {/* <div>icon</div> */}
                         </div>
                     </div>
                 </div>
@@ -198,12 +199,12 @@ const Enroll = () => {
 
 
 
-                    <Link to="/Dashboard"><div className="flex items-center justify-between z-10">
+                    <Link to="/QuizContent"><div className="flex items-center justify-between z-10">
                         <button
                             className="text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline w-full bg-gradient-to-r from-[#F0B000] to-[#F029A0] z-10"
                             type="submit"
                         >
-                            LOGIN
+                            Enroll Now
                         </button>
                     </div></Link>
 
