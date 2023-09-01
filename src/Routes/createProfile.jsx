@@ -15,7 +15,7 @@ const CreateProfile = () => {
 
         <div className="w-full h-screen bg-[#0E063D] overflow-hidden">
 
-            <div className="nav-wrapper w-full  h-[168px] fixed flex flex-col top-0 items-center justify-center bg-white bg-opacity-10 border-collapse border-b-[1px] border-opacity-40 border-white backdrop-blur-sm z-50">
+            <div className="nav-wrapper w-full fixed flex flex-col top-0 items-center justify-center bg-white bg-opacity-10 border-collapse border-b-[1px] border-opacity-40 border-white backdrop-blur-sm z-50">
 
 
                 <div className="top-row w-full">
@@ -30,31 +30,7 @@ const CreateProfile = () => {
                     </div>
                 </div>
 
-                <div className="bottom-row w-full border-collapse border-t-[1px] border-white border-opacity-30">
-                    <div className="flex flex-row full ">
-                        <div className="w-1/3 flex flex-row p-5 bg-[#0E063D] bg-opacity-40 justify-center items-center space-x-10">
-                            <div className="flex flex-col">
-                                <h4 className="text-white" >Student Details</h4>
-                                <p className="text-white opacity-50">Enter your Details</p>
-                            </div>
-                            <div className="text-[#28C600] sm:text-[1.7rem]"><FontAwesomeIcon icon={faCircleCheck} /></div>
-                        </div>
-                        <div className="w-1/3 flex flex-row p-5 justify-center items-center space-x-10 bg-[#0E063D] bg-opacity-40 ">
-                            <div className="flex flex-col">
-                                <h4 className="text-white">Overall questions of C Language</h4>
-                                <p className="text-white opacity-50">Answer all the questions </p>
-                            </div>
-                            <div className="text-[#28C600] sm:text-[1.7rem]"><FontAwesomeIcon icon={faCircleCheck} /></div>
-                        </div>
-                        <div className="w-1/3 flex flex-row p-5 justify-center items-center space-x-10 bg-[#0E063D] bg-opacity-40">
-                            <div className="flex flex-col">
-                                <h4 className="text-white">Create Profile</h4>
-                                <p className="text-white opacity-50">Automatically generated</p>
-                            </div>
-                            <div className="text-[#28C600] sm:text-[1.7rem]"><FontAwesomeIcon icon={faCircleCheck} /></div>
-                        </div>
-                    </div>
-                </div>
+              
             </div>
 
 
@@ -82,7 +58,11 @@ const CreateProfile = () => {
                                         </p>
 
 
-                                    <button className="mt-5 rounded-md bg-[#4F00F1] text-white sm:w-[50%] sm:py-3 mx-auto">Start Questions</button>
+                                    <Link to="/PlayerDashboard" className="w-full flex">
+                                            <button className="mt-5 rounded-md bg-[#4F00F1] text-white sm:w-[50%] sm:py-3 mx-auto">
+                                            Start Questions
+                                            </button>
+                                    </Link>
                 </div>
 
 

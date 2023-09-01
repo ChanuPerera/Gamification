@@ -84,7 +84,7 @@ const LandingPage = () => {
             <div className="sm:p-5 rounded-full bg-slate-600"></div>
           </div>
           <span className="text-white">100+ students online</span>
-          <Link to="/SignUp"><div className="hero-btn lg:w-[180px] p-2  rounded-full mt-2 bg-gradient-to-t from-[#F0B000] to-[#F029A0] text-white font-semibold z-30 cursor-pointer">
+          <Link to="/Enroll"><div className="hero-btn lg:w-[180px] p-2  rounded-full mt-2 bg-gradient-to-t from-[#F0B000] to-[#F029A0] text-white font-semibold z-30 cursor-pointer">
             Enroll Now
           </div></Link>
         </div>

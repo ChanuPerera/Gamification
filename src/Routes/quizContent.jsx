@@ -117,7 +117,7 @@ const QuizContent = () => {
                         </div>
 
 
-                        <Link to="/CreateProfile" className="z-30"><div className="sm:w-[220px] sm:h-[48px] rounded-full justify-center flex cursor-pointer  items-center mx-auto mt-5 bg-gradient-to-t from-[#F0B000] to-[#F029A0]">
+                        <Link to="/ProfileCreationLoading" className="z-30"><div className="sm:w-[220px] sm:h-[48px] rounded-full justify-center flex cursor-pointer  items-center mx-auto mt-5 bg-gradient-to-t from-[#F0B000] to-[#F029A0]">
                                         <span className="text-white font-semibold">Next</span>
                         </div></Link>
 
