@@ -32,7 +32,7 @@ const Enroll = () => {
 
 
     return (
-        <div className="w-full h-screen bg-[#0E063D] overflow-hidden">
+        <div className="w-full h-screen bg-[#0E063D] sm:overflow-hidden">
             
             <div className="nav-wrapper w-full  h-[168px] fixed flex flex-col top-0 items-center justify-center bg-white bg-opacity-10 border-collapse border-b-[1px] border-opacity-40 border-white backdrop-blur-sm z-50">
 
@@ -50,30 +50,38 @@ const Enroll = () => {
                 </div>
 
                 <div className="bottom-row w-full border-collapse border-t-[1px] border-white border-opacity-30">
-                    <div className="flex flex-row full ">
-                        <div className="w-1/3 flex flex-row p-5 bg-[#0E063D] bg-opacity-40 justify-center items-center space-x-10">
+                    <div className="flex sm:flex-row flex-col full ">
+                        <div className="sm:w-1/3 flex flex-row p-5 bg-[#0E063D] bg-opacity-40 justify-center items-center space-x-10">
                             <div className="flex flex-col">
                                 <h4 className="text-white" >Student Details</h4>
                                 <p className="text-white opacity-50">Enter your Details</p>
                             </div>
                             <div className="text-[#28C600] sm:text-[1.7rem]"><FontAwesomeIcon icon={faCircleCheck} /></div>
                         </div>
-                        <div className="w-1/3 flex flex-row p-5 justify-center items-center space-x-10 bg-[#606060] bg-opacity-40 ">
+
+
+                        <div className="sm:w-1/3 hidden sm:flex flex-row p-5 justify-center items-center space-x-10 bg-[#606060] bg-opacity-40 ">
                             <div className="flex flex-col">
                                 <h4 className="text-white">Overall questions of C Language</h4>
                                 <p className="text-white opacity-50">Answer all the questions </p>
                             </div>
-                            {/* <div>icon</div> */}
+                        
                         </div>
-                        <div className="w-1/3 flex flex-row p-5 justify-center items-center space-x-10 bg-[#606060] bg-opacity-40">
+
+
+                        <div className="sm:w-1/3 hidden sm:flex flex-row p-5 justify-center items-center space-x-10 bg-[#606060] bg-opacity-40">
                             <div className="flex flex-col">
                                 <h4 className="text-white">Create Profile</h4>
                                 <p className="text-white opacity-50">Automatically generated</p>
                             </div>
-                            {/* <div>icon</div> */}
+                        
                         </div>
+
+
                     </div>
                 </div>
+
+                
             </div>
 
 
@@ -81,7 +89,7 @@ const Enroll = () => {
 
 
             <div className="w-full h-screen bg-[#0E063D] mt-5 justify-center">
-                <form onSubmit={handleSubmit} className="bg-[#331497] mx-auto rounded-2xl px-8 py-5 mb-4 w-[400px] h-auto  flex flex-col justify-center overflow-clip relative top-1/2 -translate-y-1/2 backdrop-blur-md z-40">
+                <form onSubmit={handleSubmit} className="bg-[#331497] mx-auto rounded-2xl px-8 py-5 mb-4 sm:w-[400px] w-[300px] h-auto  flex flex-col justify-center overflow-clip relative top-1/2 -translate-y-1/2 backdrop-blur-md z-40 mt-[180px] sm:mt-0">
 
                     <h3 className="mb-6 text-center text-xl z-10 text-white uppercase font-link">Lets get Started</h3>
                     <div className="mb-8 z-10">

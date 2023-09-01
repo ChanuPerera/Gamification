@@ -12,8 +12,8 @@ const QuizNav = () =>{
     return(
 
 
-        <div className="md:w-[300px] h-screen fixed  top-0 z-40">
-                <div className="nav-body p-5 relative w-full  h-[80vh] mt-[167px] flex flex-col overflow-y-scroll space-y-7 " id="style-6" >
+        <div className="md:w-[300px] h-screen fixed  top-0 z-40 ">
+                <div className="nav-body p-5 relative w-full  h-[80vh] mt-[192px] flex flex-col overflow-y-scroll space-y-7 " id="style-6" >
 
 
                         <div className="content-wrapper flex flex-row justify-between items-center w-full ">

@@ -14,7 +14,7 @@ const PlayerDashNav = () => {
 
     return(
 
-        <div className="dash-nav-wrapper sm:w-[108px]  h-auto sm:p-5 p-3 bg-[#331497] rounded-lg flex sm:flex-col flex-row float-left  items-center relative">
+        <div className="dash-nav-wrapper sm:w-[108px]  h-auto sm:p-5 p-3 bg-[#331497] sm:rounded-lg flex sm:flex-col flex-row float-left  items-center relative">
             <ul className="flex sm:flex-col flex-row sm:space-y-5 items-center h-full w-full justify-between sm:justify-normal">
                 <li>
                     <div className="sm:w-[54px] sm:h-[54px] w-[18px] h-[18px] flex justify-center items-center">
@@ -52,7 +52,7 @@ const PlayerDashNav = () => {
                     </div>
                 </li>
 
-                <li className=" absolute sm:relative -top-16 sm:top-0 right-0 ">
+                <li >
                     <div className="sm:w-[54px] sm:h-[54px] w-[18px] h-[18px] flex justify-center items-center">
                         <img src={logout} alt="" className=""/>
                     </div>

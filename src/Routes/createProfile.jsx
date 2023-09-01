@@ -13,9 +13,9 @@ const CreateProfile = () => {
 
     return (
 
-        <div className="w-full h-screen bg-[#0E063D] overflow-hidden">
+        <div className="w-full h-screen bg-[#0E063D] overflow-hidden ">
 
-            <div className="nav-wrapper w-full fixed flex flex-col top-0 items-center justify-center bg-white bg-opacity-10 border-collapse border-b-[1px] border-opacity-40 border-white backdrop-blur-sm z-50">
+            <div className="nav-wrapper w-full fixed flex flex-col top-0  items-center justify-center bg-white bg-opacity-10 border-collapse border-b-[1px] border-opacity-40 border-white backdrop-blur-sm z-50">
 
 
                 <div className="top-row w-full">
@@ -34,11 +34,11 @@ const CreateProfile = () => {
             </div>
 
 
-            <div className="w-full h-screen bg-[#0E063D] mt-5 justify-center flex items-center">
+            <div className="w-full h-screen bg-[#0E063D] mt-5 justify-center flex items-center sm:p-0 p-5">
 
                 <div className="sm:w-[400px] sm:h-[400px] p-5 flex flex-col bg-white rounded-2xl shadow-md shadow-slate-700 z-40">
 
-                                        <div className="sm:w-[50px] h-[50px] flex justify-center items-center mx-auto bg-teal-500 rounded-full shadow-lg shadow-slate-500">
+                                        <div className="w-[50px] h-[50px] flex justify-center items-center mx-auto bg-teal-500 rounded-full shadow-lg shadow-slate-500">
                                             <span className="text-white font-semibold">!</span>
                                         </div>
 
@@ -59,7 +59,7 @@ const CreateProfile = () => {
 
 
                                     <Link to="/PlayerDashboard" className="w-full flex">
-                                            <button className="mt-5 rounded-md bg-[#4F00F1] text-white sm:w-[50%] sm:py-3 mx-auto">
+                                            <button className="mt-5 rounded-md bg-[#4F00F1] text-white w-[50%] py-3 mx-auto">
                                             Start Questions
                                             </button>
                                     </Link>
