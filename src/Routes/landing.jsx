@@ -54,6 +54,7 @@ import circle3 from '../Assets/Images/circle3.png';
 import mailico from '../Assets/Images/mailico.png';
 import footerbg from '../Assets/Images/footerimg.png';
 import { Link } from "react-router-dom";
+import ChatBot from "../Components/chatbot";
 
 
 
@@ -107,7 +108,9 @@ const LandingPage = () => {
           srcset=""
           className="w-full h-full sm:object-fill sm:justify-center absolute sm:block top-0 -z-10 "
         />
-        <div className="w-full h-screen"></div>
+        <div className="w-full h-screen">
+          <ChatBot />
+        </div>
       </div>
       {/* hero section */}
 
@@ -266,8 +269,10 @@ const LandingPage = () => {
         />
 
       </div>
-
       {/* How is works section */}
+
+
+
 
 
 

@@ -102,7 +102,30 @@ background: linear-gradient(0deg, rgba(240,176,0,1) 0%, rgba(240,41,160,1) 100%)
 
 
 
-
+ #style7::-webkit-scrollbar-track
+ {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   background-color: #F5F5F5;
+ }
+ 
+ #style7::-webkit-scrollbar
+ {
+   width: 5px;
+   background-color: #F5F5F5;
+ }
+ 
+ #style7::-webkit-scrollbar-thumb
+ {
+   background-color: #9747FF;	
+   background-image: -webkit-linear-gradient(45deg,
+                                             rgba(255, 255, 255, .2) 25%,
+                         transparent 25%,
+                         transparent 50%,
+                         rgba(255, 255, 255, .2) 50%,
+                         rgba(255, 255, 255, .2) 75%,
+                         transparent 75%,
+                         transparent)
+ }
 
 
 
@@ -137,4 +160,80 @@ background: linear-gradient(0deg, rgba(240,176,0,1) 0%, rgba(240,41,160,1) 100%)
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Chat messenger animation */
+.chat-messenger {
+  /* Your existing styles */
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Open state */
+.chat-messenger.open {
+  transform: translateX(50%);
+  opacity: 1;
+}
+
+/* Bot icon animation */
+.bot-icon {
+  /* Your existing styles */
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  transform: scale(0.8);
+}
+
+.bot-icon.open,
+.bot-icon img 
+{
+  opacity: 1 !important;
+  transform: scale(0.8);
+}
+
+
+
+@media (max-width:576px)
+{
+.bot-icon.open
+{
+  opacity: 0 !important;
+  display: none !important;
+}
+.bot-icon
+{
+  transform: scale(0.5);
+  bottom: 0px;
+  left: 0px;
+}
+.chat-messenger.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+/* Open state */
+.bot-icon.open {
+  transform: translateX(0);
+  opacity: 0;
 }
