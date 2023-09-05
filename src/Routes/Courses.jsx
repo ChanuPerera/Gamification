@@ -263,11 +263,6 @@ const Courses = () => {
 
 
 
-
-
-
-
-
                             <div className="course-item-holder sm:w-full md:w-full lg:w-full p-2 bg-[#151515] rounded-md flex flex-row border-[1px] border-[#151515] cursor-pointer items-center justify-between relative -z-10">
                                 <div className="course-img sm:w-[180px] lg:w-[300px] sm:h-[180px] relative w-1/4" >
                                     <img src={course1} alt="" className="object-cover w-full h-full rounded-md" />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../Assets/Images/logo2.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {    faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 import difbg from '../Assets/Images/differncebg-01.png';
@@ -9,18 +9,18 @@ import difbg from '../Assets/Images/differncebg-01.png';
 const ProfileCreationLoading = () => {
     const [loadingComplete, setLoadingComplete] = useState(false);
 
- 
+
 
     useEffect(() => {
-       
+
         const loadingTimeout = setTimeout(() => {
-          setLoadingComplete(true);
-     
-          window.location.href = '/CreateProfile'; 
-        }, 5000); 
+            setLoadingComplete(true);
+
+            window.location.href = '/CreateProfile';
+        }, 5000);
 
         return () => clearTimeout(loadingTimeout);
-      }, []);
+    }, []);
 
 
 
@@ -75,17 +75,17 @@ const ProfileCreationLoading = () => {
 
 
             <div className="w-full h-screen bg-[#0E063D] mt-5 justify-center flex items-center  ">
-                        
 
-                    
+
+
                 <div className=" sm:h-[400px] p-5 flex flex-col rounded-2xl z-40">
-                        <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
-                            Your <span className="text-[#00FADF]">Profile</span> is Creating
-                        </h2>
-                        <p className="text-[1rem] text-white font-semibold text-center">Please Wait..</p>
-                            <div className="loading-process ">
-                                <div className={`loading-circle ${loadingComplete ? 'filled' : ''}`}></div>
-                            </div>
+                    <h2 className="font-link font-semibold lg:text-[3rem] md:text-[3rem] sm:text-[2rem] text-[#ffffff] uppercase text-center">
+                        Your <span className="text-[#00FADF]">Profile</span> is Creating
+                    </h2>
+                    <p className="text-[1rem] text-white font-semibold text-center">Please Wait..</p>
+                    <div className="loading-process ">
+                        <div className={`loading-circle ${loadingComplete ? 'filled' : ''}`}></div>
+                    </div>
                 </div>
 
 
