@@ -82,8 +82,8 @@ const QuizContent = () => {
                     <QuizNav />
                 </div>
 
-                <div className="sm:w-3/4 mx-auto sm:overflow-y-scroll mb-10 relative " id="style-6">
-                    <div className="w-[80%] mt-[200px] mx-auto flex flex-col rounded-lg bg-[#331497] p-5 z-40 " >
+                <div className="sm:w-3/4 mx-auto sm:overflow-y-scroll mt-[200px] mb-10 relative " id="style-6">
+                    <div className="w-[80%]  mx-auto flex flex-col rounded-lg bg-[#331497] p-5 z-40 " >
                         <div className="head-row flex flex-col w-full  pb-5 border-collapse border-b-[1px] border-white border-opacity-40 z-40">
                             <h5 className="text-white font-semibold">Lecture 01</h5>
                             <h4 className="text-white font-semibold text-[2rem]">Introduction to programming</h4>

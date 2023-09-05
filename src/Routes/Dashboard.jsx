@@ -37,7 +37,7 @@ const PlayerDashboard = () => {
                             <img src={logo} alt="" srcset="" className="sm:w-[180px] h-full object-fill justify-center w-[100px]" />
                         </div>
                         
-                        <div className="sm:w-[20%] lg:w-[40%] sm:flex flex-row hidden ">
+                        <div className="sm:w-[20%] md:w-[40%]  lg:w-[40%] sm:flex flex-row hidden ">
                             <div className="w-1/3 flex justify-center items-center">
                                          <h3 className="text-[#FEBD27] text-[2rem]">0023</h3>
                             </div>
@@ -201,13 +201,13 @@ const PlayerDashboard = () => {
 
                             <div className="flex flex-col p-5 space-y-5 sm:w-1/3 h-full w-full relative ">
                                 <div className="flex flex-row p-3 space-x-5 justify-center ">
-                                    <div className="w-1/2 rounded-md justify-center items-center flex flex-row bg-[#F8E8B0] p-3">
-                                            <h3 className="text-[3rem] font-semibold text-black">11</h3>
+                                    <div className="w-1/2 rounded-md justify-center items-center flex flex-row bg-[#F8E8B0] p-3 md:text-[14px]">
+                                            <h3 className="lg:text-[3rem] md:text-[2rem] font-semibold text-black">11</h3>
                                             <span>Lectures Completed</span>
                                     </div>
 
-                                    <div className="w-1/2 rounded-md justify-center items-center flex flex-row bg-[#F8E8B0] p-3">
-                                            <h3 className="text-[3rem] font-semibold text-black">4</h3>
+                                    <div className="w-1/2 rounded-md justify-center items-center flex flex-row bg-[#F8E8B0] p-3 md:text-[14px]">
+                                            <h3 className="lg:text-[3rem] md:text-[2rem] font-semibold text-black">4</h3>
                                             <span>Assignments Completed</span>
                                     </div>
                                 </div>

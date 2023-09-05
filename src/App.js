@@ -9,6 +9,7 @@ import QuizContent from './Routes/quizContent';
 import CreateProfile from './Routes/createProfile';
 import ProfileCreationLoading from './Routes/profileCreationLoading';
 import PlayerDashboard from './Routes/Dashboard';
+import Courses from './Routes/Courses';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function RouterOutlet() {
     { path: 'ProfileCreationLoading', element: <ProfileCreationLoading /> },
     { path: 'CreateProfile', element: <CreateProfile /> },
     { path: 'PlayerDashboard', element: <PlayerDashboard /> },
+    { path: 'Courses', element: <Courses /> },
   ]);
 
   return element;
