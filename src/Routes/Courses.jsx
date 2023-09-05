@@ -17,7 +17,11 @@ import UserStatistic from "../Components/statistic";
 
 const Courses = () => {
 
+    const [isMaterialsVisible, setIsMaterialsVisible] = useState(false);
 
+    const toggleMaterials = () => {
+      setIsMaterialsVisible(!isMaterialsVisible);
+    };
 
 
     return (
@@ -66,15 +70,18 @@ const Courses = () => {
 
                         <div className="flex flex-col p-5 w-full sm:h-[96px] md:h-[108px] lg:h-[128px] sm:space-x-5 sm:flex-row">
 
-                            <div className="sm:w-1/2 p-3 bg-white rounded-md flex flex-row space-x-2 justify-between items-center ">
+                            <div className="sm:w-1/2 p-3 bg-white rounded-md flex flex-row space-x-2 justify-between  items-center ">
 
-                                <div className="course-ico w-[44px] h-[44px] ">
-                                    <img src={course1} alt="" className="object-cover w-full h-full rounded-sm " />
+                                <div className="justify-center flex flex-row space-x-5">
+                                    <div className="course-ico sm:w-[44px] sm:h-[44px] lg:h-[54px] lg:w-[100px] ">
+                                        <img src={course1} alt="" className="object-cover w-full h-full rounded-sm " />
+                                    </div>
+                                    <div className="flex flex-col text-left">
+                                        <h4 className="font-semibold sm:text-[0.8rem] md:text-[1rem] text-[9px]">An Introduction to C</h4>
+                                        <span className="text-[10px] sm:text-[0.6rem] md:text-[0.8rem]">by Christopher Morgan</span>
+                                    </div>
                                 </div>
-                                <div className="flex flex-col text-left">
-                                    <h4 className="font-semibold sm:text-[0.8rem] md:text-[1rem] text-[9px]">An Introduction to C</h4>
-                                    <span className="text-[10px] sm:text-[0.6rem] md:text-[0.8rem]">by Christopher Morgan</span>
-                                </div>
+
 
 
                                 <div className="flex flex-row">
@@ -109,7 +116,12 @@ const Courses = () => {
                         <div className="course-set sm:flex-col lg:flex-wrap md:flex-col flex flex-col w-full p-5  sm:space-y-5 ">
 
 
-                            <div className="course-item-holder unlock sm:w-full md:w-full lg:w-full p-2 bg-[#151515] rounded-md flex flex-col border-[1px] border-[#151515] hover:border-[#EDB8FF] cursor-pointer items-center justify-between">
+                        <div
+      className={`course-item-holder ${
+        isMaterialsVisible ? "unlock" : ""
+      } sm:w-full md:w-full lg:w-full p-2 bg-[#151515] rounded-md flex flex-col border-[1px] border-[#151515] hover:border-[#EDB8FF] cursor-pointer items-center justify-between`}
+      onClick={toggleMaterials}
+    >
 
                                 <div className="flex flex-row w-full justify-between items-center">
                                     <div className="course-img sm:w-[180px] lg:w-[300px] sm:h-[180px] relative w-1/4" >
@@ -184,58 +196,58 @@ const Courses = () => {
                                         </div>
                                     </div>
                                 </div>
-
+                                {isMaterialsVisible && (
                                 <div className="course-metarials p-2 flex flex-col w-full">
                                     <div className="flex flex-col w-full justify-between">
                                         <h2 className="text-white sm:text-[1.2rem] font-semibold">Lesson 01 : Part 1</h2>
                                     </div>
                                     <div className="note-set w-full flex flex-row mt-3 space-x-3">
-                                                <div className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
-                                                    <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3"> <span className="text-[1rem] font-semibold text-white ">100</span></div>
+                                        <div className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
+                                            <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3"> <span className="text-[1rem] font-semibold text-white ">100</span></div>
 
-                                                    <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
-                                                            <h2 className="text-white font-semibold">Algorithms and Flowcharts</h2>
-                                                    </div>
+                                            <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
+                                                <h2 className="text-white font-semibold">Algorithms and Flowcharts</h2>
+                                            </div>
 
-                                                    <span className="text-white text-[12px] underline ">Read Short Notes</span>
-                                                </div>
-
-
-                                                <div className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
-                                                    <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3"> <span className="text-[1rem] font-semibold text-white ">100</span></div>
-
-                                                    <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
-                                                            <h2 className="text-white font-semibold">Algorithms and Flowcharts</h2>
-                                                    </div>
-
-                                                    <span className="text-white text-[12px] underline ">Read Short Notes</span>
-                                                </div>
+                                            <span className="text-white text-[12px] underline ">Read Short Notes</span>
+                                        </div>
 
 
-                                                <div className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
-                                                    <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3"> <span className="text-[1rem] font-semibold text-white ">100</span></div>
+                                        <div className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
+                                            <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3"> <span className="text-[1rem] font-semibold text-white ">100</span></div>
 
-                                                    <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
-                                                            <h2 className="text-white font-semibold">Algorithms and Flowcharts</h2>
-                                                    </div>
+                                            <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
+                                                <h2 className="text-white font-semibold">Algorithms and Flowcharts</h2>
+                                            </div>
 
-                                                    <span className="text-white text-[12px] underline ">Read Short Notes</span>
-                                                </div>
+                                            <span className="text-white text-[12px] underline ">Read Short Notes</span>
+                                        </div>
 
-                                                <div className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
-                                                    <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3"> <span className="text-[1rem] font-semibold text-white ">100</span></div>
 
-                                                    <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
-                                                            <h2 className="text-white font-semibold">Algorithms and Flowcharts</h2>
-                                                    </div>
+                                        <div className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
+                                            <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3"> <span className="text-[1rem] font-semibold text-white ">100</span></div>
 
-                                                    <span className="text-white text-[12px] underline ">Read Short Notes</span>
-                                                </div>
+                                            <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
+                                                <h2 className="text-white font-semibold">Algorithms and Flowcharts</h2>
+                                            </div>
+
+                                            <span className="text-white text-[12px] underline ">Read Short Notes</span>
+                                        </div>
+
+                                        <div className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
+                                            <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3"> <span className="text-[1rem] font-semibold text-white ">100</span></div>
+
+                                            <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
+                                                <h2 className="text-white font-semibold">Algorithms and Flowcharts</h2>
+                                            </div>
+
+                                            <span className="text-white text-[12px] underline ">Read Short Notes</span>
+                                        </div>
 
 
                                     </div>
                                 </div>
-
+                                )}
 
                             </div>
 

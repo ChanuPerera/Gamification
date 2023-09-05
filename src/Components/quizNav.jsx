@@ -9,6 +9,44 @@ import difbg from '../Assets/Images/differncebg-01.png';
 
 const QuizNav = () =>{
 
+
+    const lectures = [
+        {
+          lectureNo: "01",
+          lectureName: "Introduction to programming",
+        },
+        {
+          lectureNo: "02",
+          lectureName: "Data Types and C Formatted Input/Output",
+        },
+        {
+          lectureNo: "03",
+          lectureName: "Operators in C",
+        },
+        {
+          lectureNo: "04",
+          lectureName: "Selection Statements in C / Character Handling",
+        },
+        {
+          lectureNo: "05",
+          lectureName: "Repetition statements in C",
+        },
+        {
+          lectureNo: "06",
+          lectureName: "Functions",
+        },
+        {
+          lectureNo: "07",
+          lectureName: "Arrays",
+        },
+        {
+          lectureNo: "08",
+          lectureName: "Arrays",
+        },
+      ];
+
+
+
     return(
 
 
@@ -16,97 +54,46 @@ const QuizNav = () =>{
                 <div className="nav-body p-5 relative w-full  h-[80vh] mt-[192px] flex flex-col overflow-y-scroll space-y-7 " id="style-6" >
 
 
-                        <div className="content-wrapper flex flex-row justify-between items-center w-full ">
-                            <div className="w-[40px] h-[40px] rounded-full justify-center items-center flex bg-sky-500 ">
-                                <span className="quize-no text-white font-semibold">01</span>
-                            </div>
-                            <div className="text-white justify-start items-center text-left w-2/3">
-                                    <h5 className="lecture-no text-[#7AB2FF] opacity-50 sm:text-[0.7rem]">Lecture 01</h5>
-                                    <h4 className="lecture-no text-[#7AB2FF]  sm:text-[1rem]">Introduction to programming</h4>
-                            </div>
-                        </div>
+                        {lectures.map((lecture, index) => (
+        <div
+          key={index}
+          className="content-wrapper flex flex-row justify-between items-center w-full"
+        >
+          <div className="w-[40px] h-[40px] rounded-full justify-center items-center flex bg-white">
+            <span className="quize-no text-black font-semibold">
+              {lecture.lectureNo}
+            </span>
+          </div>
+          <div className="text-white justify-start items-center text-left w-2/3">
+            <h5 className="lecture-no text-white opacity-50 sm:text-[0.7rem]">
+              Lecture {lecture.lectureNo}
+            </h5>
+            <h4 className="lecture-no text-white sm:text-[1rem]">
+              {lecture.lectureName}
+            </h4>
+          </div>
+        </div>
+      ))}
 
 
 
-                        <div className="content-wrapper flex flex-row justify-between items-center w-full">
-                            <div className="w-[40px] h-[40px] rounded-full justify-center items-center flex bg-white ">
-                                <span className="quize-no text-black font-semibold">02</span>
-                            </div>
-                            <div className="text-white justify-start items-center text-left w-2/3">
-                                    <h5 className="lecture-no text-white opacity-50 sm:text-[0.7rem]">Lecture 02</h5>
-                                    <h4 className="lecture-no text-white  sm:text-[1rem]">Data Types and C Formatted Input/Output</h4>
-                            </div>
-                        </div>
 
 
 
-                        <div className="content-wrapper flex flex-row justify-between items-center w-full">
-                            <div className="w-[40px] h-[40px] rounded-full justify-center items-center flex bg-white ">
-                                <span className="quize-no text-black font-semibold">03</span>
-                            </div>
-                            <div className="text-white justify-start items-center text-left w-2/3">
-                                    <h5 className="lecture-no text-white opacity-50 sm:text-[0.7rem]">Lecture 03</h5>
-                                    <h4 className="lecture-no text-white  sm:text-[1rem]">Operators in C</h4>
-                            </div>
-                        </div>
 
 
 
-                        <div className="content-wrapper flex flex-row justify-between items-center w-full">
-                            <div className="w-[40px] h-[40px] rounded-full justify-center items-center flex bg-white ">
-                                <span className="quize-no text-black font-semibold">04</span>
-                            </div>
-                            <div className="text-white justify-start items-center text-left w-2/3">
-                                    <h5 className="lecture-no text-white opacity-50 sm:text-[0.7rem]">Lecture 04</h5>
-                                    <h4 className="lecture-no text-white  sm:text-[1rem]">Selection Statements in C / Character Handling</h4>
-                            </div>
-                        </div>
 
 
 
-                        <div className="content-wrapper flex flex-row justify-between items-center w-full">
-                            <div className="w-[40px] h-[40px] rounded-full justify-center items-center flex bg-white ">
-                                <span className="quize-no text-black font-semibold">05</span>
-                            </div>
-                            <div className="text-white justify-start items-center text-left w-2/3">
-                                    <h5 className="lecture-no text-white opacity-50 sm:text-[0.7rem]">Lecture 05</h5>
-                                    <h4 className="lecture-no text-white  sm:text-[1rem]">Repetition statements in C</h4>
-                            </div>
-                        </div>
+
+                       
 
 
-
-                        <div className="content-wrapper flex flex-row justify-between items-center w-full">
-                            <div className="w-[40px] h-[40px] rounded-full justify-center items-center flex bg-white ">
-                                <span className="quize-no text-black font-semibold">06</span>
-                            </div>
-                            <div className="text-white justify-start items-center text-left w-2/3">
-                                    <h5 className="lecture-no text-white opacity-50 sm:text-[0.7rem]">Lecture 06</h5>
-                                    <h4 className="lecture-no text-white  sm:text-[1rem]">Functions</h4>
-                            </div>
-                        </div>
+                        
 
 
-                        <div className="content-wrapper flex flex-row justify-between items-center w-full">
-                            <div className="w-[40px] h-[40px] rounded-full justify-center items-center flex bg-white ">
-                                <span className="quize-no text-black font-semibold">07</span>
-                            </div>
-                            <div className="text-white justify-start items-center text-left w-2/3">
-                                    <h5 className="lecture-no text-white opacity-50 sm:text-[0.7rem]">Lecture 07</h5>
-                                    <h4 className="lecture-no text-white  sm:text-[1rem]">Arrays</h4>
-                            </div>
-                        </div>
-
-
-                        <div className="content-wrapper flex flex-row justify-between items-center w-full">
-                            <div className="w-[40px] h-[40px] rounded-full justify-center items-center flex bg-white ">
-                                <span className="quize-no text-black font-semibold">08</span>
-                            </div>
-                            <div className="text-white justify-start items-center text-left w-2/3">
-                                    <h5 className="lecture-no text-white opacity-50 sm:text-[0.7rem]">Lecture 08</h5>
-                                    <h4 className="lecture-no text-white  sm:text-[1rem]">Arrays</h4>
-                            </div>
-                        </div>
+                        
 
                         
                        
