@@ -23,6 +23,11 @@ code {
   font-family: 'Chakra Petch', sans-serif;
 }
 
+.neon-font
+{
+  color: #00FADF ;
+}
+
 .quize-item-card.active {
   color: #1f1f71;
   

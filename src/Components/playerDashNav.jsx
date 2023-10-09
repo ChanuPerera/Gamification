@@ -58,9 +58,20 @@ const PlayerDashNav = () => {
                 </li>
 
                 <li>
-                    <div className="sm:w-[54px] sm:h-[54px] w-[18px] h-[18px]  flex justify-center items-center">
+                    <Link
+                        to="/MyProfile"
+                        onClick={() => handleLiClick("/MyProfile")}
+                        className={activeLink === "/MyProfile" ? "active-link" : ""}
+                    >
+                    <div
+                            className={`sm:w-[54px] sm:h-[54px] md:w-[54px] md:h-[54px] w-[18px] h-[18px] flex justify-center items-center rounded-lg ${activeLink === "/MyProfile"
+                                    ? "bg-[#8098FA] bg-opacity-40"
+                                    : "bg-transparent"
+                                }`}
+                        >
                         <img src={user} alt="" className="" />
                     </div>
+                    </Link>
                 </li>
 
                 <li>

@@ -10,6 +10,7 @@ import CreateProfile from './Routes/createProfile';
 import ProfileCreationLoading from './Routes/profileCreationLoading';
 import PlayerDashboard from './Routes/Dashboard';
 import Courses from './Routes/Courses';
+import MyProfile from './Routes/MyProfile';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function RouterOutlet() {
     { path: 'CreateProfile', element: <CreateProfile /> },
     { path: 'PlayerDashboard', element: <PlayerDashboard /> },
     { path: 'Courses', element: <Courses /> },
+    { path: 'MyProfile', element: <MyProfile /> },
   ]);
 
   return element;
