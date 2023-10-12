@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCheck, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import difbg from '../Assets/Images/differncebg-01.png';
+import axios from "axios";
 
 const Login = () => {
 
@@ -16,6 +17,19 @@ const Login = () => {
         event.preventDefault();
         console.log("email: ", email);
         console.log("password: ", password);
+        axios.post("login.php", { email, password })
+        .then(response => {
+            if (response.data.success) {
+                // Login successful, you can redirect or perform any action here
+                console.log("Login successful");
+            } else {
+                // Login failed, handle the error
+                console.log("Login failed: " + response.data.message);
+            }
+        })
+        .catch(error => {
+            console.error("API request error: ", error);
+        });
 
     }
 
