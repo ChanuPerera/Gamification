@@ -39,6 +39,8 @@ const Enroll = () => {
                }else{
                 //toast.success(res.message);
                 localStorage.setItem('user', JSON.stringify(res.user));
+                localStorage.setItem('value01', 0);
+                localStorage.setItem('value02', 0);
                 navigate('/CreateProfile');
                }       
             } 

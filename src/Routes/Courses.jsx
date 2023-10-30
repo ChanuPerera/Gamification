@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from '../Assets/Images/logo2.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faFire } from "@fortawesome/free-solid-svg-icons";
@@ -24,6 +24,28 @@ const Courses = () => {
         setIsMaterialsVisible(!isMaterialsVisible);
     };
 
+    const [points,setPoints]=useState(0)
+    const [points2,setPoints2]=useState(0)
+
+    useEffect(() => {
+        const value01 = parseInt(localStorage.getItem('value01'));
+        const value02 = parseInt(localStorage.getItem('value02'));
+        if(value01){
+            setPoints(value01)
+        }
+        if(value02){
+            setPoints2(value02)
+        }
+        
+    }, [localStorage]);
+
+    const setValue01=()=>{
+        localStorage.setItem('value01', 100+points);
+        localStorage.setItem('value02', 100+points);
+        setPoints(100+points);
+        setPoints2(100+points);
+    }
+
 
     return (
 
@@ -44,10 +66,10 @@ const Courses = () => {
 
                         <div className="sm:w-[20%] md:w-[40%] lg:w-[40%] sm:flex flex-row hidden ">
                             <div className="w-1/3 flex justify-center items-center">
-                                <h3 className="text-[#FEBD27] text-[2rem]">0023</h3>
+                                <h3 className="text-[#FEBD27] text-[2rem]">{points}</h3>
                             </div>
                             <div className="w-1/3 flex justify-center items-center">
-                                <h3 className="text-[#FEBD27] text-[2rem] ">0423</h3>
+                                <h3 className="text-[#FEBD27] text-[2rem] ">{points2}</h3>
                             </div>
                             <div className="w-1/3 flex justify-center relative">
                                 <div className="w-[54px] h-[53px] rounded-full bg-white">
@@ -214,7 +236,7 @@ const Courses = () => {
                                                     download="Example-PDF-document"
                                                     target="_blank"
                                                     rel="noreferrer"
-                                                ><span className="text-white text-[12px] underline ">Read Short Notes</span></a>
+                                                ><span onClick={()=>setValue01()} className="text-white text-[12px] underline ">Read Short Notes</span></a>
                                             </div>
 
 
@@ -230,7 +252,7 @@ const Courses = () => {
                                                     download="Example-PDF-document"
                                                     target="_blank"
                                                     rel="noreferrer"
-                                                ><span className="text-white text-[12px] underline ">Read Short Notes</span></a>
+                                                ><span onClick={()=>setValue01()} className="text-white text-[12px] underline ">Read Short Notes</span></a>
                                             </div>
 
 
@@ -246,7 +268,7 @@ const Courses = () => {
                                                     download="Example-PDF-document"
                                                     target="_blank"
                                                     rel="noreferrer"
-                                                ><span className="text-white text-[12px] underline ">Read Short Notes</span></a>
+                                                ><span onClick={()=>setValue01()} className="text-white text-[12px] underline ">Read Short Notes</span></a>
                                             </div>
 
                                             <div className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
@@ -261,7 +283,7 @@ const Courses = () => {
                                                     download="Example-PDF-document"
                                                     target="_blank"
                                                     rel="noreferrer"
-                                                ><span className="text-white text-[12px] underline ">Read Short Notes</span></a>
+                                                ><span onClick={()=>setValue01()} className="text-white text-[12px] underline ">Read Short Notes</span></a>
                                             </div>
 
 

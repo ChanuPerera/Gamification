@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from '../Assets/Images/logo2.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft,faFire   } from "@fortawesome/free-solid-svg-icons";
@@ -16,8 +16,21 @@ import UserStatistic from "../Components/statistic";
 
 
 const PlayerDashboard = () => {
+    
+    const [points,setPoints]=useState(0)
+    const [points2,setPoints2]=useState(0)
 
-
+    useEffect(() => {
+        const value01 = localStorage.getItem('value01');
+        const value02 = localStorage.getItem('value02');
+        if(value01){
+            setPoints(value01)
+        }
+        if(value02){
+            setPoints2(value02)
+        }
+        
+    }, [localStorage]);
 
 
     return (
@@ -39,10 +52,10 @@ const PlayerDashboard = () => {
                         
                         <div className="sm:w-[20%] md:w-[40%]  lg:w-[40%] sm:flex flex-row hidden ">
                             <div className="w-1/3 flex justify-center items-center">
-                                         <h3 className="text-[#FEBD27] text-[2rem]">0023</h3>
+                                         <h3 className="text-[#FEBD27] text-[2rem]">{points}</h3>
                             </div>
                             <div className="w-1/3 flex justify-center items-center">
-                                        <h3 className="text-[#FEBD27] text-[2rem] ">0423</h3>
+                                        <h3 className="text-[#FEBD27] text-[2rem] ">{points2}</h3>
                             </div>
                             <div className="w-1/3 flex justify-center relative">
                                         <div className="w-[54px] h-[53px] rounded-full bg-white">
