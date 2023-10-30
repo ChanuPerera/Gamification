@@ -1,5 +1,6 @@
 import axios from "axios";
 import { env_data } from "../env_data/env_data";
+import { toast } from "react-toastify";
 
 
 //auth
@@ -57,7 +58,7 @@ export async function assessmentFindAll() {
 
 }
 
-//chat 
+//ml api 
 
 export async function sendMessage(data) {
     try {
@@ -70,7 +71,53 @@ export async function sendMessage(data) {
         }
 
     } catch (error) {
+        
+        return toast.error(error.message)
+    }
 
+}
+
+export async function answerValidation(data) {
+    try {
+        
+
+        const response = await axios.post(`${env_data.ml_base_url}introduction_score`, data);
+        if (response) {
+            return response;
+        }
+
+    } catch (error) {
+        
+        return toast.error(error.message)
+    }
+
+}
+
+//leaderBoard
+export async function saveMarks(data) {
+    try {
+        
+
+        const response = await axios.post(`${env_data.base_url}leaderBoard`, data);
+        if (response) {
+            return response;
+        }
+
+    } catch (error) {
+        
+        return toast.error(error.message)
+    }
+
+}
+
+//quiz
+
+export async function getAllQuizs() {
+    try {
+
+        const response = await axios.get(`${env_data.base_url}api/quiz/findAll`);
+        return response.data;
+    } catch (error) {
         return error
     }
 

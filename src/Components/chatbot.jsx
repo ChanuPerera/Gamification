@@ -59,6 +59,9 @@ const ChatBot = () => {
   }, [isChatOpen]);
 
   const sendMessgae=()=>{
+        if(loadingBot){
+            return;
+        } 
         setChatArr([...chatArr,{message:messageText,bot:false}]);
         setLoadingBot(true);
         setMessageText("");

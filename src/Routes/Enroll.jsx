@@ -3,18 +3,22 @@ import logo from '../Assets/Images/logo2.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {    faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import difbg from '../Assets/Images/differncebg-01.png';
 import { signUp } from "../services/service";
 import { toast } from "react-toastify";
+import { CircularProgress } from "@mui/material";
+
 
 
 const Enroll = () => {
-
+    
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [isLoadingSignup,setIsLoadingSignup] = useState(false);
+    const navigate =useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -23,15 +27,25 @@ const Enroll = () => {
             password:password,
             email:email
         }
-        console.log(signup_data);
+        if(password!==confirmPassword){
+            return toast.error('Password not matched')
+        }
+        setIsLoadingSignup(true)
         signUp(signup_data).then(res => {
             if (res) {
-               console.log(res);
-               toast.success(res.message)
+                setIsLoadingSignup(false)
+               if(res.response){
+                toast.error(res.response.data.message)
+               }else{
+                //toast.success(res.message);
+                localStorage.setItem('user', JSON.stringify(res.response.data.user));
+                navigate('/QuizContent');
+               }       
             } 
         }).catch(err => {
             console.log(err);
-            toast.error(err.message)
+            setIsLoadingSignup(false)
+            
         })
     };
 
@@ -224,7 +238,7 @@ const Enroll = () => {
                             className="text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline w-full bg-gradient-to-r from-[#F0B000] to-[#F029A0] z-10"
                             type="submit"
                         >
-                            Enroll Now
+                            Enroll Now {isLoadingSignup && <CircularProgress size={20} className="mx-2" />}   
                         </button>
                     </div>
 

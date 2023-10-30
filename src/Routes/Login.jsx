@@ -2,33 +2,40 @@ import { useState } from "react";
 import logo from '../Assets/Images/logo2.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCheck, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import difbg from '../Assets/Images/differncebg-01.png';
 import axios from "axios";
+import { signIn } from "../services/service";
+import { CircularProgress } from "@mui/material";
+import { toast } from "react-toastify";
 
 const Login = () => {
 
 
-
+    const navigate =useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
 
     function handleSubmit(event) {
         event.preventDefault();
         console.log("email: ", email);
         console.log("password: ", password);
-        axios.post("login.php", { email, password })
-        .then(response => {
-            if (response.data.success) {
-                // Login successful, you can redirect or perform any action here
-                console.log("Login successful");
-            } else {
-                // Login failed, handle the error
-                console.log("Login failed: " + response.data.message);
-            }
-        })
-        .catch(error => {
-            console.error("API request error: ", error);
+        signIn({email:email,password:password}).then(res => {
+            if (res) {
+                if (res.response) {
+                    toast.error(res.response.data.message)
+                } else {
+                    localStorage.setItem('user', JSON.stringify(res));
+                    setLoading(false);
+                    toast.success("Login successful");
+                    navigate('/Dashboard');
+                }
+            } 
+        }).catch(err => { 
+            console.log(err);
+            navigate('/Dashboard'); 
+            setLoading(false)  
         });
 
     }
@@ -119,14 +126,14 @@ const Login = () => {
 
 
 
-                    <Link to="/Dashboard"><div className="flex items-center justify-between z-10">
+                    <div className="flex items-center justify-between z-10">
                         <button
                             className="text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline w-full bg-gradient-to-r from-[#F0B000] to-[#F029A0] z-10"
                             type="submit"
                         >
-                            LOGIN
+                            LOGIN{loading && <CircularProgress size={20} className="mx-2" />}
                         </button>
-                    </div></Link>
+                    </div>
 
                     <div className="text-center mt-5 z-10 ">
                         <span className="text-white">Don't have an account ? <Link to="/Enroll" className="text-[#00FADF] cursor-pointer fonr-link"> Enroll Now </Link></span>
