@@ -38,7 +38,7 @@ const Enroll = () => {
                 toast.error(res.response.data.message)
                }else{
                 //toast.success(res.message);
-                localStorage.setItem('user', JSON.stringify(res.response.data.user));
+                localStorage.setItem('user', JSON.stringify(res.user));
                 navigate('/QuizContent');
                }       
             } 
