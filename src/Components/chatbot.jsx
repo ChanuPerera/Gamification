@@ -61,11 +61,15 @@ const ChatBot = () => {
   const sendMessgae=()=>{
         setChatArr([...chatArr,{message:messageText,bot:false}]);
         setLoadingBot(true);
+        setMessageText("");
         sendMessage(messageText).then(res => {
             if (res) {
+                var newText = res.data.bot.replace(/\n/g, '');
+                setChatArr([...chatArr,{message:newText,bot:true}]);
                 setLoadingBot(false);
             } 
-        }).catch(err => {    
+        }).catch(err => { 
+            console.log(err);   
             toast.error(err.message);
             setLoadingBot(false);
         })
