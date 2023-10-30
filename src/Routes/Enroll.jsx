@@ -39,7 +39,7 @@ const Enroll = () => {
                }else{
                 //toast.success(res.message);
                 localStorage.setItem('user', JSON.stringify(res.user));
-                navigate('/QuizContent');
+                navigate('/CreateProfile');
                }       
             } 
         }).catch(err => {

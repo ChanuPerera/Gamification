@@ -8,15 +8,25 @@ import difbg from '../Assets/Images/differncebg-01.png';
 
 const ProfileCreationLoading = () => {
     const [loadingComplete, setLoadingComplete] = useState(false);
+    const [marks, setMarks]=useState("High leval");
+    const [user,setUser]= useState({username:"name"});
+    
 
 
 
     useEffect(() => {
-
+        const storedMarks = localStorage.getItem('marks');
+        if (storedMarks) {
+            setMarks(JSON.parse(storedMarks).mark);
+        }
+        const storedUser = localStorage.getItem('user');
+        if (storedUser) {
+          setUser(JSON.parse(storedUser));
+        }
         const loadingTimeout = setTimeout(() => {
             setLoadingComplete(true);
 
-            window.location.href = '/CreateProfile';
+            window.location.href = '/PlayerDashboard';
         }, 5000);
 
         return () => clearTimeout(loadingTimeout);
@@ -49,7 +59,7 @@ const ProfileCreationLoading = () => {
                         <div className="w-1/3 hidden sm:flex flex-row p-5 bg-[#0E063D] bg-opacity-40 justify-center items-center space-x-10">
                             <div className="flex flex-col">
                                 <h4 className="text-white" >Student Details</h4>
-                                <p className="text-white opacity-50">Enter your Details</p>
+                                <p className="text-white opacity-50">User Name : {user.username}</p>
                             </div>
                             <div className="text-[#f6f8f6] sm:text-[1.7rem]"><FontAwesomeIcon icon={faCircleCheck} /></div>
                         </div>
@@ -57,6 +67,7 @@ const ProfileCreationLoading = () => {
                             <div className="flex flex-col">
                                 <h4 className="text-white">Overall questions of C Language</h4>
                                 <p className="text-white opacity-50">Answer all the questions </p>
+                                <h4 className="text-white">Marks: {marks}</h4>
                             </div>
                             <div className="text-[#28C600] sm:text-[1.7rem]"><FontAwesomeIcon icon={faCircleCheck} /></div>
                         </div>

@@ -154,10 +154,14 @@ const getAllQuizes =()=>{
                             saveMarks(marks_data).then(res => {
                                 if (res) {
                                    setIsLoading(false)
+                                   const marksstr={
+                                    mark:caqulateMarks()
+                                   }
+                                   localStorage.setItem('marks', JSON.stringify(marksstr));
                                    navigate('/ProfileCreationLoading');
                                 } 
                             }).catch(err => { 
-                                console.log(err);
+                                console.log(err); 
                                 navigate('/ProfileCreationLoading');   
                                 setIsLoading(false);
                             });

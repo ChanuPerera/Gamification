@@ -58,7 +58,7 @@ const CreateProfile = () => {
                                         </p>
 
 
-                                    <Link to="/PlayerDashboard" className="w-full flex">
+                                    <Link to="/QuizContent" className="w-full flex">
                                             <button className="mt-5 rounded-md bg-[#4F00F1] text-white w-[50%] py-3 mx-auto">
                                             Start Questions
                                             </button>
