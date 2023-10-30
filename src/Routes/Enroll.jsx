@@ -5,13 +5,11 @@ import {    faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 import difbg from '../Assets/Images/differncebg-01.png';
-
-
+import { signUp } from "../services/service";
+import { toast } from "react-toastify";
 
 
 const Enroll = () => {
-
-
 
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
@@ -20,7 +18,21 @@ const Enroll = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Handle form submission here
+        const signup_data= {
+            username:username,
+            password:password,
+            email:email
+        }
+        console.log(signup_data);
+        signUp(signup_data).then(res => {
+            if (res) {
+               console.log(res);
+               toast.success(res.message)
+            } 
+        }).catch(err => {
+            console.log(err);
+            toast.error(err.message)
+        })
     };
 
     const [showPassword, setShowPassword] = useState(false);
@@ -207,14 +219,14 @@ const Enroll = () => {
 
 
 
-                    <Link to="/QuizContent"><div className="flex items-center justify-between z-10">
+                    <div className="flex items-center justify-between z-10">
                         <button
                             className="text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline w-full bg-gradient-to-r from-[#F0B000] to-[#F029A0] z-10"
                             type="submit"
                         >
                             Enroll Now
                         </button>
-                    </div></Link>
+                    </div>
 
                     <div className="text-center mt-5 z-10 ">
                         <span className="text-white">Already have an account ? <Link to="/Login" className="text-[#00FADF] cursor-pointer fonr-link"> Login </Link></span>

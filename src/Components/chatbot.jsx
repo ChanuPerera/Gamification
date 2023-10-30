@@ -6,12 +6,18 @@ import bot4 from '../Assets/Images/bot4.png';
 import bot5 from '../Assets/Images/bot5.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMicrophoneLines, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { sendMessage } from "../services/service";
+import { toast } from "react-toastify";
+import { CircularProgress } from "@mui/material";
 
 
 const ChatBot = () => {
 
     const chatMessengerRef = useRef(null);
     const [isChatOpen, setIsChatOpen] = useState(false);
+    const [messageText, setMessageText] = useState("");
+    const [loadingBot,setLoadingBot] = useState(false)
+    const [chatArr,setChatArr] = useState([{message:"How can I assist you?",bot:true}])
     const toggleChat = () => {
         setIsChatOpen(!isChatOpen);
     };
@@ -52,6 +58,19 @@ const ChatBot = () => {
     };
   }, [isChatOpen]);
 
+  const sendMessgae=()=>{
+        setChatArr([...chatArr,{message:messageText,bot:false}]);
+        setLoadingBot(true);
+        sendMessage(messageText).then(res => {
+            if (res) {
+                setLoadingBot(false);
+            } 
+        }).catch(err => {    
+            toast.error(err.message);
+            setLoadingBot(false);
+        })
+  }
+
 
 
     return (
@@ -75,20 +94,27 @@ const ChatBot = () => {
                     <div className="sernder-message p-3 bg-[#5C3BB9]  mt-3 rounded-tl-md rounded-tr-md rounded-bl-md shadow-md shadow-gray-300">
                         <p className="text-white sm:text-[0.8rem] text-[12px]">hellow</p>
                     </div>
-
-                    <div className="sernder-message p-3 bg-white  mt-3 rounded-tl-md rounded-tr-md rounded-br-md shadow-md shadow-gray-300 border-gray-300 border-[1px] border-opacity-30">
-                        <p className="text-gray-900 sm:text-[0.8rem] text-[12px]">How can I assist you?</p>
-                    </div>
+                    {chatArr.map((chat, index) => {
+                        return (
+                            <div className={`sernder-message p-3 ${chat.bot?"bg-white":"bg-[#D6CBFC]"}  mt-3 rounded-tl-md rounded-tr-md rounded-br-md shadow-md shadow-gray-300 border-gray-300 border-[1px] border-opacity-30`}>
+                                <p key={index} className="text-gray-900 sm:text-[0.8rem] text-[12px]">{chat.message}</p>
+                            </div>
+                        )
+                    })}
+                    {loadingBot && <div className="w-full justify-center flex items-center">
+                        <CircularProgress size={20} />
+                    </div>}
+                    
                 </div>
                 <div className="w-full sm:h-[80px] bg-white  border-collapse border-gray-300 border-opacity-60 border-t-[1px] justify-center flex items-center">
                     <div className="text-[12px] sm:text-[0.8rem] bg-[#5C3BB9] w-full bg-opacity-25 h-[44px] justify-between items-center flex flex-row">
-                        <input type="text" placeholder="Type here.." className="p-2 h-full w-full bg-transparent text-gray-800" />
+                        <input type="text" placeholder="Type here.." value={messageText} onChange={(e)=>setMessageText(e.target.value)} className="p-2 h-full w-full bg-transparent text-gray-800" />
                         <div className="w-1/3 justify-end items-center flex space-x-3 p-2">
                             <button className="p-2 bg-[#5C3BB9] text-white flex justify-center sm:w-[24px] sm:h-[24px] rounded-sm items-center">
                                 <FontAwesomeIcon icon={faMicrophoneLines} />
                             </button>
                             <button className="p-2 bg-[#5C3BB9] text-white flex justify-center sm:w-[24px] sm:h-[24px] rounded-sm items-center"
-                                onClick={toggleChat}>
+                                onClick={()=>sendMessgae()}>
                                 <FontAwesomeIcon icon={faPaperPlane} />
                             </button>
                         </div>
