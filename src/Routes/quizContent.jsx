@@ -198,6 +198,14 @@ const getAllQuizes =()=>{
         
     }
 
+    const handlePaste = (event) => {
+        const clipboardData = event.clipboardData;
+        if (clipboardData && clipboardData.types.includes('text/plain')) {
+          toast.warn("Warning: Pasting text into answer is not allowed");
+          toast.warn("Please enter your response manually");
+        }
+      };
+
 
 
     return (
@@ -286,6 +294,7 @@ const getAllQuizes =()=>{
                                 1.{currentLecture.Q1}
                             </p>
                             <textarea
+                                onPaste={handlePaste}
                                 placeholder="Answer type here..."
                                 className="p-3 bg-[#10144E] resize-none text-white"
                                 rows={10}
@@ -300,6 +309,7 @@ const getAllQuizes =()=>{
                                 2.{currentLecture.Q2}
                             </p>
                             <textarea
+                                onPaste={handlePaste}
                                 placeholder="Answer type here..."
                                 className="p-3 bg-[#10144E] resize-none text-white"
                                 rows={10}
