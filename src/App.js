@@ -13,6 +13,7 @@ import Courses from './Routes/Courses';
 import MyProfile from './Routes/MyProfile';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AssignmentContent from './Routes/assignments';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function RouterOutlet() {
     { path: 'PlayerDashboard', element: <PlayerDashboard /> },
     { path: 'Courses', element: <Courses /> },
     { path: 'MyProfile', element: <MyProfile /> },
+    { path: 'Assignment', element: <AssignmentContent /> },
   ]);
 
   return element;

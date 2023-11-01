@@ -123,6 +123,22 @@ export async function getAllQuizs() {
 
 }
 
+
+// Courses
+
+export async function getAllCourses() {
+    try {
+
+        const response = await axios.get(`${env_data.base_url}api/courses/`);
+        return response.data;
+    } catch (error) {
+        return error
+    }
+
+}
+
+
+
 // leaderBoard
 
 // export async function createReport(data) {
