@@ -13,7 +13,7 @@ import course1 from '../Assets/Images/c.png';
 import profileimg from '../Assets/Images/profileuser.png';
 import UserStatistic from "../Components/statistic";
 import doc from '../Assets/Notes/Introduction_to_C_programming.pdf';
-import { getAllCourses, getLPR, updateCourses } from "../services/service";
+import { getAllCourses, getLPR, updateCourses, updateLPR } from "../services/service";
 
 const Courses = () => {
 
@@ -29,14 +29,14 @@ const Courses = () => {
     const [points, setPoints] = useState(0);
     const [points2, setPoints2] = useState(0);
     const [user, setUser] = useState({});
-    const [isLoading, setIsLoading] = useState(true); 
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const userFromLocalStorage = JSON.parse(localStorage.getItem('user'));
 
         if (userFromLocalStorage) {
             setUser(userFromLocalStorage);
-            setIsLoading(false); 
+            setIsLoading(false);
         }
     }, []);
 
@@ -67,6 +67,14 @@ const Courses = () => {
     }
 
 
+    const updateLPRFunction = (id, points) => {
+        updateLPR(id, points).then(res => {
+            if (res) {
+                getAllCourseFunction();
+            }
+        })
+    }
+
 
     const lessionClick = (index) => {
         toggleMaterials();
@@ -77,10 +85,16 @@ const Courses = () => {
         localStorage.setItem('CourseCode', course);
         localStorage.setItem('LessionNumber', lession);
         part.data[0].partStatus = "unlocked";
-        updateCourses(part.data[0].id, part.data[0])
+
+        updateCourses(part.data[0].id, part.data[0]);
         getAllCourseFunction();
-        if (currentPartIndex == '2')
+        if (part.data[0].partStatus != "unlocked") {
+            updateLPRFunction(user.id, part.data[0].Points);
+        }
+
+        if (currentPartIndex == '2') {
             navigate('/Assignment');
+        }
     }
 
 
@@ -235,7 +249,7 @@ const Courses = () => {
                                                                     target="_blank"
                                                                     rel="noreferrer"
                                                                 >
-                                                                    <span  className="text-white text-[12px] underline ">{part.data[0].LinkTitle}</span>
+                                                                    <span className="text-white text-[12px] underline ">{part.data[0].LinkTitle}</span>
                                                                 </a>
                                                             ) : (
                                                                 <div >

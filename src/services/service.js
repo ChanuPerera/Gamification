@@ -170,9 +170,9 @@ export async function getLPR(id) {
 }
 
 
-export async function updateLPR(id) {
+export async function updateLPR(id,points) {
     try {
-        const response = await axios.put(`${env_data.base_url}api/userLPR/${id}`);
+        const response = await axios.put(`${env_data.base_url}api/userLPR/${id}`,{points});
         return response.data;
     } catch (error) {
         return error
