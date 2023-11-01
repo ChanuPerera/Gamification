@@ -19,8 +19,12 @@ const Login = () => {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log("email: ", email);
-        console.log("password: ", password);
+        if(email==""){
+            return toast.error("Please enter Email address")
+        }
+        if(password==""){
+            return toast.error("Please enter Password")
+        }
         signIn({email:email,password:password}).then(res => {
             if (res) {
                 if (res.response) {
