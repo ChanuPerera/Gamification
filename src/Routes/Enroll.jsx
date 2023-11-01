@@ -22,6 +22,11 @@ const Enroll = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        if(email=="" || username=="" || password=="" || confirmPassword==""){
+            return toast.error("Please fill all feilds")
+        }
+
         const signup_data= {
             username:username,
             password:password,
