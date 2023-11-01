@@ -13,7 +13,7 @@ import course1 from '../Assets/Images/c.png';
 import profileimg from '../Assets/Images/profileuser.png';
 import UserStatistic from "../Components/statistic";
 import doc from '../Assets/Notes/Introduction_to_C_programming.pdf';
-import { getAllCourses, updateCourses } from "../services/service";
+import { getAllCourses, getLPR, updateCourses } from "../services/service";
 
 const Courses = () => {
 
@@ -26,36 +26,47 @@ const Courses = () => {
         setIsMaterialsVisible(true);
     };
 
-    const [points, setPoints] = useState(0)
-    const [points2, setPoints2] = useState(0)
+    const [points, setPoints] = useState(0);
+    const [points2, setPoints2] = useState(0);
+    const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true); 
 
     useEffect(() => {
-        getAllCourseFunction();
-        const value01 = parseInt(localStorage.getItem('value01'));
-        const value02 = parseInt(localStorage.getItem('value02'));
-        if (value01) {
-            setPoints(value01)
-        }
-        if (value02) {
-            setPoints2(value02)
-        }
+        const userFromLocalStorage = JSON.parse(localStorage.getItem('user'));
 
-    }, [localStorage]);
+        if (userFromLocalStorage) {
+            setUser(userFromLocalStorage);
+            setIsLoading(false); 
+        }
+    }, []);
+
+    useEffect(() => {
+        if (!isLoading) {
+            getAllCourseFunction();
+            getLPRFuntion();
+        }
+    }, [isLoading]);
 
     const getAllCourseFunction = () => {
         getAllCourses().then(res => {
-            if (res)
+            if (res) {
                 setCourses(res);
-        })
+            }
+        });
+    }
+
+    const getLPRFuntion = () => {
+        if (user) {
+            getLPR(user.id).then(res => {
+                if (res) {
+                    setPoints(res.points);
+                    setPoints2(res.rewards);
+                }
+            });
+        }
     }
 
 
-    const setValue01 = () => {
-        localStorage.setItem('value01', 100 + points);
-        localStorage.setItem('value02', 100 + points);
-        setPoints(100 + points);
-        setPoints2(100 + points);
-    }
 
     const lessionClick = (index) => {
         toggleMaterials();
@@ -65,14 +76,11 @@ const Courses = () => {
     const partClick = (course, lession, part, currentPartIndex) => {
         localStorage.setItem('CourseCode', course);
         localStorage.setItem('LessionNumber', lession);
-        console.log(part);
         part.data[0].partStatus = "unlocked";
         updateCourses(part.data[0].id, part.data[0])
         getAllCourseFunction();
-        console.log(currentIndex);
         if (currentPartIndex == '2')
             navigate('/Assignment');
-
     }
 
 
@@ -227,7 +235,7 @@ const Courses = () => {
                                                                     target="_blank"
                                                                     rel="noreferrer"
                                                                 >
-                                                                    <span onClick={() => setValue01()} className="text-white text-[12px] underline ">{part.data[0].LinkTitle}</span>
+                                                                    <span  className="text-white text-[12px] underline ">{part.data[0].LinkTitle}</span>
                                                                 </a>
                                                             ) : (
                                                                 <div >
