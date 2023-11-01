@@ -13,14 +13,14 @@ import course1 from '../Assets/Images/c.png';
 import profileimg from '../Assets/Images/profileuser.png';
 import UserStatistic from "../Components/statistic";
 import doc from '../Assets/Notes/Introduction_to_C_programming.pdf';
-import { getAllCourses } from "../services/service";
+import { getAllCourses, updateCourses } from "../services/service";
 
 const Courses = () => {
 
     const [isMaterialsVisible, setIsMaterialsVisible] = useState(false);
     const [courses, setCourses] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(null);
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const toggleMaterials = () => {
         setIsMaterialsVisible(true);
@@ -30,11 +30,7 @@ const Courses = () => {
     const [points2, setPoints2] = useState(0)
 
     useEffect(() => {
-        getAllCourses().then(res => {
-            if (res)
-                setCourses(res);
-        })
-
+        getAllCourseFunction();
         const value01 = parseInt(localStorage.getItem('value01'));
         const value02 = parseInt(localStorage.getItem('value02'));
         if (value01) {
@@ -45,6 +41,14 @@ const Courses = () => {
         }
 
     }, [localStorage]);
+
+    const getAllCourseFunction = () => {
+        getAllCourses().then(res => {
+            if (res)
+                setCourses(res);
+        })
+    }
+
 
     const setValue01 = () => {
         localStorage.setItem('value01', 100 + points);
@@ -58,11 +62,19 @@ const Courses = () => {
         setCurrentIndex(index);
     }
 
-    const partClick = (course, lession) => {       
+    const partClick = (course, lession, part, currentPartIndex) => {
         localStorage.setItem('CourseCode', course);
         localStorage.setItem('LessionNumber', lession);
-        navigate('/Assignment');  
+        console.log(part);
+        part.data[0].partStatus = "unlocked";
+        updateCourses(part.data[0].id, part.data[0])
+        getAllCourseFunction();
+        console.log(currentIndex);
+        if (currentPartIndex == '2')
+            navigate('/Assignment');
+
     }
+
 
     return (
 
@@ -184,9 +196,9 @@ const Courses = () => {
                                                     <div key={index} className="level-card p-2 sm:w-[80px] sm:h-[80px] bg-[#E2BC80] rounded-md border-[3px] border-[#FFF6D8] flex flex-col justify-center items-center" onClick={() => lessionClick(index)}>
                                                         <span className="sm:text-[2rem] text-white font-semibold">{index + 1}</span>
                                                         <div className="star-row flex flex-row">
-                                                            <div className="star-pattern bg-[#000000] sm:w-[18px] sm:h-[18px]"></div>
-                                                            <div className="star-pattern bg-[#000000] sm:w-[18px] sm:h-[18px]"></div>
-                                                            <div className="star-pattern bg-[#000000] sm:w-[18px] sm:h-[18px]"></div>
+                                                            <div className={`star-pattern ${details.Parts[0] && details.Parts[0].data[0].partStatus === "unlocked" ? "bg-[#ffcf00]" : "bg-[#000000]"} sm:w-[18px] sm:h-[18px]`}></div>
+                                                            <div className={`star-pattern ${details.Parts[1] && details.Parts[1].data[0].partStatus === "unlocked" ? "bg-[#ffcf00]" : "bg-[#000000]"} sm:w-[18px] sm:h-[18px]`}></div>
+                                                            <div className={`star-pattern ${details.Parts[2] && details.Parts[2].data[0].partStatus === "unlocked" ? "bg-[#ffcf00]" : "bg-[#000000]"} sm:w-[18px] sm:h-[18px]`}></div>
                                                         </div>
 
                                                     </div>
@@ -201,28 +213,42 @@ const Courses = () => {
                                             </div>
                                             <div className="note-set w-full flex flex-row mt-3 space-x-3">
                                                 {course.Courses[currentIndex].Parts.map((part, partIndex) => (
-                                                    <div key={partIndex} className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
-                                                        <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3"> <span className="text-[1rem] font-semibold text-white ">{part.data[0].Points}</span></div>
+                                                    part.data[0].partStatus === 'unlocked' ? (
+                                                        <div key={partIndex} className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
+                                                            <div className="w-[60px] py-1 rounded-md bg-[#90D83C] justify-center items-center flex absolute top-3 right-3">
+                                                                <span className="text-[1rem] font-semibold text-white ">{part.data[0].Points}</span>
+                                                            </div>
+                                                            <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
+                                                                <h2 className="text-white font-semibold">{part.data[0].PartTitle}</h2>
+                                                            </div>
+                                                            {partIndex === 2 ? (
+                                                                <a
+                                                                    onClick={() => partClick(part.data[0].CourseCode, course.Courses[currentIndex].LessionNumber, course.Courses[currentIndex + 1].Parts[0], partIndex)}
+                                                                    target="_blank"
+                                                                    rel="noreferrer"
+                                                                >
+                                                                    <span onClick={() => setValue01()} className="text-white text-[12px] underline ">{part.data[0].LinkTitle}</span>
+                                                                </a>
+                                                            ) : (
+                                                                <div >
+                                                                    {partIndex + 1 < course.Courses[currentIndex].Parts.length && (
+                                                                        <a href={part.data[0].Link} target="_blank" rel="noreferrer" onClick={() => partClick(part.data[0].CourseCode, course.Courses[currentIndex].LessionNumber, course.Courses[currentIndex].Parts[partIndex + 1], partIndex)}>
+                                                                            <span className="text-white text-[12px] underline ">{part.data[0].LinkTitle}</span>
+                                                                        </a>
+                                                                    )}
+                                                                </div>
 
-                                                        <div className="p-2 justify-center items-center text-center flex w-full mx-auto">
-                                                            <h2 className="text-white font-semibold">{part.data[0].PartTitle}</h2>
+                                                            )}
                                                         </div>
-                                                        {partIndex == 2 ? <a
-                                                            onClick={() => partClick(part.data[0].CourseCode, course.Courses[currentIndex].LessionNumber)}
-                                                            target="_blank"
-                                                            rel="noreferrer"
-                                                        ><span onClick={() => setValue01()} className="text-white text-[12px] underline ">{part.data[0].LinkTitle}</span></a>
-                                                            : <a
-                                                                href={part.data[0].Link}
-                                                                target="_blank"
-                                                                rel="noreferrer"
-                                                            ><span onClick={() => setValue01()} className="text-white text-[12px] underline ">{part.data[0].LinkTitle}</span></a>
-                                                        }
-                                                    </div>
-                                                ))
-                                                }
+                                                    ) : (
+                                                        <div key={partIndex} className="note-card w-[160px] h-[160px] rounded-sm bg-[#4A4582] flex flex-col justify-center items-center relative">
+                                                            <img src="https://media.istockphoto.com/id/865922950/vector/flat-style-banner-security-concept-with-lock-and-chain-around-laptop.jpg?s=612x612&w=0&k=20&c=uP_9kwiWYIQyR43vtoA9UFAZsmrPVrNAZjLKfSY6XN4=" />
+                                                        </div>
 
+                                                    )
+                                                ))}
                                             </div>
+
                                         </div>
                                     )}
 
