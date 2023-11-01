@@ -12,26 +12,43 @@ import Tue from '../Assets/Images/T.png';
 import course1 from '../Assets/Images/c.png';
 import profileimg from '../Assets/Images/profileuser.png';
 import UserStatistic from "../Components/statistic";
+import { getLPR } from "../services/service";
 
 
 
 const PlayerDashboard = () => {
     
-    const [points,setPoints]=useState(0)
-    const [points2,setPoints2]=useState(0)
+    const [points, setPoints] = useState(0);
+    const [points2, setPoints2] = useState(0);
+    const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true); 
 
     useEffect(() => {
-        const value01 = localStorage.getItem('value01');
-        const value02 = localStorage.getItem('value02');
-        if(value01){
-            setPoints(value01)
-        }
-        if(value02){
-            setPoints2(value02)
-        }
-        
-    }, [localStorage]);
+        const userFromLocalStorage = JSON.parse(localStorage.getItem('user'));
 
+        if (userFromLocalStorage) {
+            setUser(userFromLocalStorage);
+            setIsLoading(false); 
+        }
+    }, []);
+
+    useEffect(() => {
+        if (!isLoading) {
+            getLPRFuntion();
+        }
+    }, [isLoading]);
+
+
+    const getLPRFuntion = () => {
+        if (user) {
+            getLPR(user.id).then(res => {
+                if (res) {
+                    setPoints(res.points);
+                    setPoints2(res.rewards);
+                }
+            });
+        }
+    }
 
     return (
 

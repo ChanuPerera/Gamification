@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import difbg from '../Assets/Images/differncebg-01.png';
 import QuizNav from "../Components/quizNav";
 import CountdownTimer from "../Components/countDown";
-import { answerValidation, getAllQuizs, saveMarks } from "../services/service";
+import { answerValidation, getAllAssignmentQuizs, getAllQuizs, saveMarks } from "../services/service";
 import Loader from "../Components/loader";
 import { toast } from "react-toastify";
 
@@ -84,7 +84,7 @@ useEffect(() => {
 
 const getAllQuizes =()=>{
     setIsLoading(true)
-    getAllQuizs().then(res => {
+    getAllAssignmentQuizs().then(res => {
         if (res) {
 
            let quizdata= res.map((data,index)=>{
@@ -238,38 +238,6 @@ const getAllQuizes =()=>{
                     </div>
                 </div>
 
-                <div className="bottom-row w-full border-collapse border-t-[1px] border-white border-opacity-30">
-                    <div className="flex sm:flex-row full flex-col ">
-
-
-                        <div className="sm:w-1/3 w-full hidden sm:flex flex-row p-5 bg-[#0E063D] bg-opacity-40 justify-center items-center space-x-10">
-                            <div className="flex flex-col">
-                                <h4 className="text-white" >Student Details</h4>
-                                <p className="text-white opacity-50">Enter your Details</p>
-                            </div>
-                            <div className="text-[#28C600] sm:text-[1.7rem]"><FontAwesomeIcon icon={faCircleCheck} /></div>
-                        </div>
-
-
-                        <div className="sm:w-1/3 w-full sm:flex flex-row p-5 justify-center items-center space-x-10 bg-[#0E063D] bg-opacity-40 ">
-                            <div className="flex flex-col ">
-                                <h4 className="text-white">Overall questions of C Language</h4>
-                                <p className="text-white opacity-50">Answer all the questions </p>
-                            </div>
-                            <div className="text-[#28C600] sm:text-[1.7rem]"><FontAwesomeIcon icon={faCircleCheck} /></div>
-                        </div>
-
-
-                        <div className="sm:w-1/3 hidden sm:flex flex-row p-5 justify-center items-center space-x-10 bg-[#606060] bg-opacity-40">
-                            <div className="flex flex-col">
-                                <h4 className="text-white">Create Profile</h4>
-                                <p className="text-white opacity-50">Automatically generated</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
             </div>
 
 
@@ -278,9 +246,7 @@ const getAllQuizes =()=>{
 
             <div className="w-full h-screen bg-[#0E063D] mt-5 justify-between  flex sm:flex-row z-40 flex-col overflow-y-scroll sm:overflow-hidden ">
 
-                <div className="sm:w-1/3 lg:w-1/6 sm:mt-5 sm:block hidden">
-                    <QuizNav activeLecture={activeLecture} />
-                </div>
+          
 
                 <div className="sm:w-3/4 mx-auto sm:overflow-y-scroll mt-[200px] mb-10 relative " id="style-6">
                     <div className="w-[80%]  mx-auto flex flex-col rounded-lg bg-[#331497] p-5 z-40 ">

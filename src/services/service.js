@@ -154,6 +154,48 @@ export async function getAllCourses() {
 
 }
 
+export async function updateCourses(id, update) {
+    try {
+      const response = await axios.put(`${env_data.base_url}api/courses/${id}`, update);
+      return response.data;
+    } catch (error) {
+      return error;
+    }
+  }
+
+
+
+//  Assignment 
+export async function getAllAssignmentQuizs() {
+    try {
+        const response = await axios.get(`${env_data.base_url}api/assignementQuizes`);
+        return response.data;
+    } catch (error) {
+        return error
+    }
+}
+
+
+// Point Level Rewards
+export async function getLPR(id) {
+    try {
+        const response = await axios.get(`${env_data.base_url}api/userLPR/${id}`);
+        return response.data;
+    } catch (error) {
+        return error
+    }
+}
+
+
+export async function updateLPR(id) {
+    try {
+        const response = await axios.put(`${env_data.base_url}api/userLPR/${id}`);
+        return response.data;
+    } catch (error) {
+        return error
+    }
+}
+
 
 
 // leaderBoard

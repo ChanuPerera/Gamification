@@ -33,12 +33,12 @@ const Login = () => {
                     localStorage.setItem('user', JSON.stringify(res));
                     setLoading(false);
                     toast.success("Login successful");
-                    navigate('/Dashboard');
+                    navigate('/playerDashboard');
                 }
             } 
         }).catch(err => { 
             console.log(err);
-            navigate('/Dashboard'); 
+            navigate('/playerDashboard'); 
             setLoading(false)  
         });
 
