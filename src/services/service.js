@@ -1,6 +1,7 @@
 import axios from "axios";
 import { env_data } from "../env_data/env_data";
 import { toast } from "react-toastify";
+// import videoFile from './Assets/video.mp4';
 
 
 //auth
@@ -92,6 +93,22 @@ export async function answerValidation(data) {
     }
 
 }
+
+// export async function videoValidation() {
+//     try {
+//         const formData = new FormData();
+//         formData.append('video', videoFile);
+//         const response = await axios.post(`${env_data.ml_base_url}programming_assistant`, formData);
+//         if (response) {
+//             return response;
+//         }
+
+//     } catch (error) {
+        
+//         return toast.error(error.message)
+//     }
+
+// }
 
 //leaderBoard
 export async function saveMarks(data) {
